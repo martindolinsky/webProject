@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="antialiased bg-black">
+    <header class="header relative lg:overflow-hidden">
+        <div class="absolute inset-0 z-negative lg:opacity-100 opacity-50">
+            <video src="../images/video.mp4" autoplay muted loop class="object-cover w-full h-full"></video>
+        </div>
+
+        <nav class="md:p-3 py-2 px-3 z-10">
+            <div class="container mx-auto md:flex block flex-wrap items-center justify-start">
+              <div class="flex-1 flex items-center justify-between">
+                <a href="#">
+                  <img src="../images/logo.webp" alt="GSL Logo">
+                </a>
+
+                    <button data-menu-toggle class="md:hidden block pr-1">
+                        <svg class="fill-current text-white w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
+                      </button>
+
+                </div>
+                <ul data-menu class="md:flex hidden flex-wrap items-center justify-start text-white">
+                    <li class="md:px-6 py-2">
+                      <a href="#" class="text-brand">Home</a>
+                    </li>
+                    <li class="md:px-6 py-2 text-red-600">
+                      <a href="#">Movies</a>
+                    </li>
+                    <li class="md:px-6 py-2">
+                      <a href="#">TV Series</a>
+                    </li>
+                    <li class="md:px-6 py-2">
+                      <a href="#">About Us</a>
+                    </li>
+                    <li class="md:px-6 py-2">
+                      <a href="#">Contact</a>
+                    </li>
+                  </ul>
+            </div>
+        </nav>
+        <div class="container mx-auto lg:mt-56 lg:px-16 px-4 py-4">
+            <div class="md:pl-8 md:border-l border-white">
+              <p class="text-white tracking-wide text-base font-light leading-none">Out now</p>
+              <h1 class="text-white md:text-6xl text-2xl font-bold font-sans m-0 md:leading-none">Knights of Wales</h1>
+              <p class="text-white text-lg md:max-w-lg w-full md:my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo laboriosam quae mollitia voluptatibus placeat. Libero adipisci ipsam, nobis, corrupti nesciunt id beatae laudantium quis dolorum aliquam impedit quae recusandae ad.</p>
+              <a href="#" class="p-3 bg-orange-500 hover:bg-transparent hover:text-white transition-500 rounded-lg">Stup mi na vajca</a>
+            </div>
+          </div>
+    </header>
+
+    <div class="container mx-auto my-6 lg:px-16 px-4">
+        <ul class="flex items-center leading-normal text-gray-500 font-alt">
+          <li class="text-gray-300 pr-2">Latest Additions</li>
+          <li class="pr-2">|</li>
+          <li class="pr-2">
+            <a href="#" class="text-red-600">All Movies</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex items-stretch justify-start mb-10 px-4 overflow-hidden relative">
+        <a href="#" class="relative group block mr-4 flex-shrink-0">
+          <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
+            <div>
+              <h3 class="text-lg mb-2">PedoMan</h3>
+              <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
+            </div>
+          </div>
+          <img class="w-64" src="../images/Spider.jpg" alt="#">
+        </a>
+
+        <a href="#" class="relative group block mr-4 flex-shrink-0">
+            <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
+              <div>
+                <h3 class="text-lg mb-2">PedoMan2</h3>
+                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
+              </div>
+            </div>
+            <img class="max-w-xs" src="../images/Spider2.jpg" alt="#">
+          </a>
+
+<script src="index.js"></script>
+</body>
+</html>
