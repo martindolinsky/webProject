@@ -1,0 +1,75 @@
+body {
+  background-image: url("images/bg-img.jpg.jpg");
+  background-color: grey;
+}
+.trailer {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.trailer iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 60px;
+  background-color: #323236ec;
+  resize: none;
+  color: white;
+  margin: 5px 10px;
+}
+button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: rgb(99, 102, 102);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 400px;
+  cursor: pointer;
+}
+
+.description {
+  background-color: #323236ec;
+  color: white;
+  width: 100%;
+  margin: 10px;
+}
+.titleEN,
+.titleSK,
+.imdb {
+  color: violet;
+}
+.comment-box {
+  width: 100%;
+  padding: 3px;
+  margin: 5px 10px;
+  color: white;
+  background-color: #323236ec;
+}
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.A,
+.B,
+.C {
+  height: 300px;
+  width: 200px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: #404047a2;
+  font-size: 30px;
+}
