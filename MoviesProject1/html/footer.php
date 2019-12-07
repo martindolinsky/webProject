@@ -1,3 +1,3 @@
 <footer class="footer">
-    Martin Dolinsky
+    © Martin Dolinsky, Jakub Kutka, Damian Matysko
 </footer>

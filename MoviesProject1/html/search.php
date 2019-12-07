@@ -42,9 +42,9 @@ include "header.php";
 
                     echo '
                 <div class="row-grid" style="color: white;">
-                    <a href="search-item.php?id=' . $row["movieID"] . '">
+                    <a href="item.php?id=' . $row["movieID"] . '">
                     <img src="' . getMovieImageSrc($row["movieID"]) . '" alt="' . getMovieTitle($row["movieID"]) . ' ' . getMovieSecondTitle($row["movieID"]) . '" width="120"/></a>
-                    <a href="search-item.php?id=' . $row["movieID"] . '"> ' .  getMovieTitle($row["movieID"]) . '<br>' .  getMovieSecondTitle($row["movieID"]) . '</a>
+                    <a href="item.php?id=' . $row["movieID"] . '"> ' . getMovieTitle($row["movieID"]) . '<br>' . getMovieSecondTitle($row["movieID"]) . '</a>
                 </div>
     ';
                 }
@@ -58,6 +58,15 @@ include "header.php";
 
 </div>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
 
 </body>
 </html>
