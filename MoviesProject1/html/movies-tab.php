@@ -100,7 +100,8 @@ include_once 'connection.php';
     if ($queryResults > 0) {
         // output data of each row
         while ($row = mysqli_fetch_assoc($result)) {
-            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\"item.php?id=1\">\n"
+            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\""
+                . getMoviePage($row['movieID']) . "\">\n"
                 . "        <div style=\"border-radius: 10px;\"\n"
                 . "             class=\"absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center\">\n"
                 . "            <div>\n"

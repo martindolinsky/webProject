@@ -142,4 +142,9 @@ function getItemSrc($number)
     }
 }
 
+function getMoviePage($number)
+{
+    return "item.php?id=" . $number;
+}
+
 
