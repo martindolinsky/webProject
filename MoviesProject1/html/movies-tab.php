@@ -85,200 +85,240 @@ include_once 'connection.php';
 
 <div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="movies-section">
 
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2"><?php echo getMovieTitle(1);
-                    echo " ";
-                    echo getMovieSecondTitle(1) ?></h3>
-                <p class="leading-normal"><?php echo getMovieDesc(1) ?></p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(1) ?>">
-    </a>
+    <!--    need to fix this!!!-->
+    <?php
+    $title = mysqli_real_escape_string($conn, $_GET['id']);
 
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2"><?php echo getMovieTitle(2);
-                    echo " ";
-                    echo getMovieSecondTitle(2) ?></h3>
-                <p class="leading-normal"><?php echo getMovieDesc(2); ?></p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(2) ?>">
-    </a>
 
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2"><?php echo getMovieTitle(3);
-                    echo " ";
-                    echo getMovieSecondTitle(3) ?></h3>
-                <p class="leading-normal"><?php echo getMovieDesc(3); ?></p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(3) ?>">
-    </a>
+    // show contacts
+    $sql = "select * from movies";
 
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2">Spider-Man 2</h3>
-                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus
-                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus
-                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(4) ?>">
-    </a>
+    $result = mysqli_query($conn, $sql);
+    $queryResults = mysqli_num_rows($result);
 
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2">Spider-Man 2</h3>
-                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus
-                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus
-                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(5) ?>">
-    </a>
 
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2">Spider-Man 2</h3>
-                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus
-                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus
-                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(8) ?>">
-    </a>
+    if ($queryResults > 0) {
+        // output data of each row
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\"item.php?id=1\">\n"
+                . "        <div style=\"border-radius: 10px;\"\n"
+                . "             class=\"absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center\">\n"
+                . "            <div>\n"
+                . "                <h3 class=\"text-lg mb-2\">"
+                . getMovieTitle($row['movieID']) . "\n"
+                . " "
+                . getMovieSecondTitle($row['movieID']) . "</h3>\n"
+                . "                <p class=\"leading-normal\">"
+                . getMovieDesc($row['movieID']) . "</p>\n"
+                . "            </div>\n"
+                . "        </div>\n"
+                . "        <img style=\"border-radius: 10px; height: 474.5px \" alt=\"#\" class=\"max-w-xs\" src=\""
+                . getMovieImageSrc($row['movieID']) . "\">\n"
+                . "    </a>";
 
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2">Spider-Man 2</h3>
-                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus
-                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus
-                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(9) ?>">
-    </a>
+        }
+    } else {
+        echo "0 results";
+    }
 
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2">Spider-Man 2</h3>
-                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus
-                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus
-                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(10) ?>">
-    </a>
 
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2">Spider-Man 2</h3>
-                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus
-                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus
-                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(11) ?>">
-    </a>
+    ?>
 
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2">Spider-Man 2</h3>
-                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus
-                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus
-                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(12) ?>">
-    </a>
-
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2">Spider-Man 2</h3>
-                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus
-                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus
-                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(13) ?>">
-    </a>
-
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2">Spider-Man 2</h3>
-                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus
-                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus
-                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(14) ?>">
-    </a>
-
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2">Spider-Man 2</h3>
-                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus
-                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus
-                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(15) ?>">
-    </a>
-
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2">Spider-Man 2</h3>
-                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus
-                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus
-                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(16) ?>">
-    </a>
-
-    <a class="relative group block mr-4 flex-shrink-0" href="#">
-        <div style="border-radius: 10px;"
-             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">
-            <div>
-                <h3 class="text-lg mb-2">Spider-Man 2</h3>
-                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus
-                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus
-                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
-            </div>
-        </div>
-        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="<?php echo getMovieImageSrc(18) ?>">
-    </a>
+    <!--    <a class="relative group block mr-4 flex-shrink-0" href="#">-->
+    <!--        <div style="border-radius: 10px;"-->
+    <!--             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">-->
+    <!--            <div>-->
+    <!--                <h3 class="text-lg mb-2">--><?php //echo getMovieTitle(2);
+    //                    echo " ";
+    //                    echo getMovieSecondTitle(2) ?><!--</h3>-->
+    <!--                <p class="leading-normal">--><?php //echo getMovieDesc(2); ?><!--</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="-->
+    <?php //echo getMovieImageSrc(2) ?><!--">-->
+    <!--    </a>-->
+    <!---->
+    <!--    <a class="relative group block mr-4 flex-shrink-0" href="#">-->
+    <!--        <div style="border-radius: 10px;"-->
+    <!--             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">-->
+    <!--            <div>-->
+    <!--                <h3 class="text-lg mb-2">--><?php //echo getMovieTitle(3);
+    //                    echo " ";
+    //                    echo getMovieSecondTitle(3) ?><!--</h3>-->
+    <!--                <p class="leading-normal">--><?php //echo getMovieDesc(3); ?><!--</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="-->
+    <?php //echo getMovieImageSrc(3) ?><!--">-->
+    <!--    </a>-->
+    <!---->
+    <!--    <a class="relative group block mr-4 flex-shrink-0" href="#">-->
+    <!--        <div style="border-radius: 10px;"-->
+    <!--             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">-->
+    <!--            <div>-->
+    <!--                <h3 class="text-lg mb-2">Spider-Man 2</h3>-->
+    <!--                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus-->
+    <!--                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus-->
+    <!--                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="-->
+    <?php //echo getMovieImageSrc(4) ?><!--">-->
+    <!--    </a>-->
+    <!---->
+    <!--    <a class="relative group block mr-4 flex-shrink-0" href="#">-->
+    <!--        <div style="border-radius: 10px;"-->
+    <!--             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">-->
+    <!--            <div>-->
+    <!--                <h3 class="text-lg mb-2">Spider-Man 2</h3>-->
+    <!--                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus-->
+    <!--                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus-->
+    <!--                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="-->
+    <?php //echo getMovieImageSrc(5) ?><!--">-->
+    <!--    </a>-->
+    <!---->
+    <!--    <a class="relative group block mr-4 flex-shrink-0" href="#">-->
+    <!--        <div style="border-radius: 10px;"-->
+    <!--             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">-->
+    <!--            <div>-->
+    <!--                <h3 class="text-lg mb-2">Spider-Man 2</h3>-->
+    <!--                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus-->
+    <!--                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus-->
+    <!--                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="-->
+    <?php //echo getMovieImageSrc(8) ?><!--">-->
+    <!--    </a>-->
+    <!---->
+    <!--    <a class="relative group block mr-4 flex-shrink-0" href="#">-->
+    <!--        <div style="border-radius: 10px;"-->
+    <!--             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">-->
+    <!--            <div>-->
+    <!--                <h3 class="text-lg mb-2">Spider-Man 2</h3>-->
+    <!--                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus-->
+    <!--                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus-->
+    <!--                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="-->
+    <?php //echo getMovieImageSrc(9) ?><!--">-->
+    <!--    </a>-->
+    <!---->
+    <!--    <a class="relative group block mr-4 flex-shrink-0" href="#">-->
+    <!--        <div style="border-radius: 10px;"-->
+    <!--             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">-->
+    <!--            <div>-->
+    <!--                <h3 class="text-lg mb-2">Spider-Man 2</h3>-->
+    <!--                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus-->
+    <!--                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus-->
+    <!--                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="-->
+    <?php //echo getMovieImageSrc(10) ?><!--">-->
+    <!--    </a>-->
+    <!---->
+    <!--    <a class="relative group block mr-4 flex-shrink-0" href="#">-->
+    <!--        <div style="border-radius: 10px;"-->
+    <!--             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">-->
+    <!--            <div>-->
+    <!--                <h3 class="text-lg mb-2">Spider-Man 2</h3>-->
+    <!--                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus-->
+    <!--                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus-->
+    <!--                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="-->
+    <?php //echo getMovieImageSrc(11) ?><!--">-->
+    <!--    </a>-->
+    <!---->
+    <!--    <a class="relative group block mr-4 flex-shrink-0" href="#">-->
+    <!--        <div style="border-radius: 10px;"-->
+    <!--             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">-->
+    <!--            <div>-->
+    <!--                <h3 class="text-lg mb-2">Spider-Man 2</h3>-->
+    <!--                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus-->
+    <!--                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus-->
+    <!--                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="-->
+    <?php //echo getMovieImageSrc(12) ?><!--">-->
+    <!--    </a>-->
+    <!---->
+    <!--    <a class="relative group block mr-4 flex-shrink-0" href="#">-->
+    <!--        <div style="border-radius: 10px;"-->
+    <!--             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">-->
+    <!--            <div>-->
+    <!--                <h3 class="text-lg mb-2">Spider-Man 2</h3>-->
+    <!--                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus-->
+    <!--                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus-->
+    <!--                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="-->
+    <?php //echo getMovieImageSrc(13) ?><!--">-->
+    <!--    </a>-->
+    <!---->
+    <!--    <a class="relative group block mr-4 flex-shrink-0" href="#">-->
+    <!--        <div style="border-radius: 10px;"-->
+    <!--             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">-->
+    <!--            <div>-->
+    <!--                <h3 class="text-lg mb-2">Spider-Man 2</h3>-->
+    <!--                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus-->
+    <!--                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus-->
+    <!--                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="-->
+    <?php //echo getMovieImageSrc(14) ?><!--">-->
+    <!--    </a>-->
+    <!---->
+    <!--    <a class="relative group block mr-4 flex-shrink-0" href="#">-->
+    <!--        <div style="border-radius: 10px;"-->
+    <!--             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">-->
+    <!--            <div>-->
+    <!--                <h3 class="text-lg mb-2">Spider-Man 2</h3>-->
+    <!--                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus-->
+    <!--                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus-->
+    <!--                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="-->
+    <?php //echo getMovieImageSrc(15) ?><!--">-->
+    <!--    </a>-->
+    <!---->
+    <!--    <a class="relative group block mr-4 flex-shrink-0" href="#">-->
+    <!--        <div style="border-radius: 10px;"-->
+    <!--             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">-->
+    <!--            <div>-->
+    <!--                <h3 class="text-lg mb-2">Spider-Man 2</h3>-->
+    <!--                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus-->
+    <!--                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus-->
+    <!--                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="-->
+    <?php //echo getMovieImageSrc(16) ?><!--">-->
+    <!--    </a>-->
+    <!---->
+    <!--    <a class="relative group block mr-4 flex-shrink-0" href="#">-->
+    <!--        <div style="border-radius: 10px;"-->
+    <!--             class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center">-->
+    <!--            <div>-->
+    <!--                <h3 class="text-lg mb-2">Spider-Man 2</h3>-->
+    <!--                <p class="leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam temporibus-->
+    <!--                    error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus-->
+    <!--                    beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <img style="border-radius: 10px;" alt="#" class="max-w-xs" src="-->
+    <?php //echo getMovieImageSrc(18) ?><!--">-->
+    <!--    </a>-->
 
 
 </div>

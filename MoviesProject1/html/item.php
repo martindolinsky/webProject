@@ -77,9 +77,28 @@ include 'comments.inc.php';
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"
     ></script>
-    <title><?php echo getMovieTitle(1);
-        echo " ";
-        echo getMovieSecondTitle(1) ?></title>
+    <title>
+        <?php
+        $title = mysqli_real_escape_string($conn, $_GET['id']);
+
+
+        // show contacts
+        $sql = "select * from movies where movieID = $title";
+
+        $result = mysqli_query($conn, $sql);
+        $queryResults = mysqli_num_rows($result);
+
+        if ($queryResults > 0) {
+            // output data of each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "" . $row['titleEN'] . " " . $row['secondTitleEN'];
+            }
+        } else {
+            echo "0 results";
+        }
+        ?>
+
+    </title>
 </head>
 
 <body style="margin: 0;">
@@ -91,7 +110,25 @@ include "header.php"
 <!-- video -->
 <div class="trailer">
     <iframe
-            src="https://www.youtube.com/embed/zAGVQLHvwOY"
+        <?php
+        $title = mysqli_real_escape_string($conn, $_GET['id']);
+
+
+        // show contacts
+        $sql = "select * from movies where movieID = $title";
+
+        $result = mysqli_query($conn, $sql);
+        $queryResults = mysqli_num_rows($result);
+
+        if ($queryResults > 0) {
+            // output data of each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "src=" . $row['src'];
+            }
+        } else {
+            echo "0 results";
+        }
+        ?>
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen

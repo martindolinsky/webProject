@@ -127,4 +127,19 @@ function getSerialImageSrc($number) {
     }
 }
 
+function getItemSrc($number)
+{
+    global $conn;
+
+    $sql = "SELECT * FROM movies where movieid = $number;";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            return $row['src'];
+        }
+    }
+}
+
 
