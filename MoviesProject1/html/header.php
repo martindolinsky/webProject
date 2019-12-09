@@ -16,7 +16,7 @@
                         <a class="nav-link" href="movies-tab.php">Movies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tvseries-tab.php">Serials</a>
+                        <a class="nav-link" href="tvseries-tab.php">TV Series</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.php">Contact</a>
@@ -24,11 +24,15 @@
                 </ul>
             </div>
 
-            <form class="form-inline my-2 my-lg-0" action="search.php" method="POST">
-                <input class="form-control mr-sm-2" name="search" type="text" placeholder="Search..." aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" name="submit-search" id="submit" type="submit">Search</button>
-            </form>
-
+            <div class="form">
+                <form class="form-inline my-2 my-lg-0" action="search.php" method="POST">
+                    <input class="form-control mr-sm-2" name="search" type="text" placeholder="Search..."
+                           aria-label="Search">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" name="submit-search" id="submit" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
 
 
         </div>

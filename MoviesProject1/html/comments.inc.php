@@ -19,12 +19,12 @@ function setComments($conn)
 
 function getComments($conn)
 {
-    $sql = "SELECT * FROM comments";
+    $sql = "SELECT * FROM comments ORDER BY date DESC";
     $resolut = $conn->query($sql);
     echo "<br>";
     while ($row = $resolut->fetch_assoc()) {
         echo "<div class='comment-box'>";
-        echo "<h5 style='color: blue'>" . $row['userID'] . "<br>";
+        echo "<h5 style='color: white'>" . $row['userID'] . "<br>";
         echo $row['date'] . "</h5>" . "<br>";
         echo $row['message'];
         echo "</div>";

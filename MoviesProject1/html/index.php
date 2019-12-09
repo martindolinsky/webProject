@@ -19,10 +19,9 @@
 <content>
     <div class="sep"></div>
     <div class="slideshow  w3-display-container">
-        <img class="mySlides" src="../img/movies/a_1920.jpg" style="width:100%">
-        <img class="mySlides" src="../img/movies/aiw_1920.jpg" style="width:100%">
-        <img class="mySlides" src="../img/movies/z_1920.jpg" style="width:100%">
-
+        <a href="play-movie.php?id=2"><img class="mySlides" src="../img/movies/a_1920.jpg" style="width:100%"></a>
+        <a href="play-movie.php?id=4"><img class="mySlides" src="../img/movies/aiw_1920.jpg" style="width:100%"></a>
+        <a href="play-movie.php?id=16"><img class="mySlides" src="../img/movies/z_1920.jpg" style="width:100%"></a>
     </div>
     <div class="sep"></div>
     <div class="container1">

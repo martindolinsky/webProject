@@ -17,11 +17,7 @@ include "header.php";
 
 ?>
 <div class="sep"></div>
-<div class="container1">
-    <h1 style="color: #fff;">Results Movies : </h1>
-    <div class="row" style="display: flex; flex-direction: row; justify-content: center">
-
-
+<div class="main-container" style="display: flex; flex-direction: column; margin: 0 5%">
 
         <?php
 
@@ -38,33 +34,39 @@ include "header.php";
 
 
             if ($queryResult > 0) {
+                echo '
+                <div class="container2">
+            <h1 style="color: #fff;">Results in Movies : </h1>
+            <div class="row" style="display: flex; flex-direction: row; justify-content: center">
+                
+                ';
                 while ($row = mysqli_fetch_assoc($result)) {
 
                     echo '
+        
+
                 <div class="row-grid" style="color: white;">
                     <a href="play-movie.php?id=' . $row["movieID"] . '">
                     <img src="' . getMovieImageSrc($row["movieID"]) . '" alt="' . getMovieTitle($row["movieID"]) . ' ' . getMovieSecondTitle($row["movieID"]) . '" width="120"/></a>
                     <a href="play-movie.php?id=' . $row["movieID"] . '"> ' . getMovieTitle($row["movieID"]) . '<br>' . getMovieSecondTitle($row["movieID"]) . '</a>
                 </div>
+                    
     ';
                 }
+                echo '
+                </div>
+                    </div>
+                ';
 
             } else {
+                echo "<div style='color: white'>";
                 echo "There are no results in movies matching your search: " . "$search";
+                echo "</div>";
             }
         }
         ?>
-    </div>
-</div>
-<br>
-<div class="sep"></div>
-<div class="sep"></div>
-<div class="sep"></div>
-<div class="sep"></div>
-<div class="container1">
 
-    <h1 style="color: #fff;">Results Serials : </h1>
-    <div class="row" style="display: flex; flex-direction: row; justify-content: center">
+
 
         <?php
 
@@ -80,6 +82,13 @@ include "header.php";
 
 
             if ($queryResult > 0) {
+                echo '
+
+                <div class="container2">
+
+    <h1 style="color: #fff;">Results in TV Series : </h1>
+    <div class="row" style="display: flex; flex-direction: row; justify-content: center">
+                ';
                 while ($row = mysqli_fetch_assoc($result)) {
 
                     echo '
@@ -90,12 +99,18 @@ include "header.php";
             </div>
 ';
                 }
+                echo '
+                </div>
+                ';
 
             } else {
-                echo "There are no results in serials matching your search: " . "$search";
+                echo "<div style='color: white'>";
+                echo "There are no results in TV Series matching your search: " . "$search";
+                echo "</div>";
             }
         }
         ?>
+
 </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

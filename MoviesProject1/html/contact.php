@@ -13,16 +13,20 @@ include_once 'connection.php';
 <?php include 'header.php';?>
 <div class="sep"></div>
 <div class="container1" style="background-color: #363836;color: #fff; height: 700px;margin: 0 20%;">
-    <div class="sep"></div>
     <form class="contact-form" action="contactform.php" method="post" style="display: flex; flex-direction: column;align-items: center">
-        <h3>First name:</h3>
-        <input type="text" name="firstName" placeholder="First name...">
+        <h3 style="padding-top: 20px;">First name:</h3>
+        <input style="width: 50%; margin: 10px; padding: 5px; border-radius: 10px; border: 2px solid black; font-size: 1.5em"
+               type="text" name="firstName" placeholder="First name...">
         <h3>Last name:</h3>
-        <input type="text" name="lastName" placeholder="Last name...">
+        <input style="width: 50%; margin: 10px; padding: 5px; border-radius: 10px; border: 2px solid black; font-size: 1.5em"
+               type="text" name="lastName" placeholder="Last name...">
         <h3>E-mail:</h3>
-        <input type="email" name="email" placeholder="email@email.com">
+        <input style="width: 50%; margin: 10px; padding: 5px; border-radius: 10px; border: 2px solid black; font-size: 1.5em"
+               type="email" name="email" placeholder="email@email.com">
         <h3>Message:</h3>
-        <textarea name="message" placeholder="Message..." id="message" cols="50" rows="10"></textarea>
+        <textarea
+                style="width: 80%; margin: 10px; padding: 5px;border-radius: 10px; border: 2px solid black; font-size: 1.5em"
+                name="message" placeholder="Message..." id="message" cols="50" rows="5"></textarea>
         <button type="submit" name="submit" class="btn btn-outline-primary" style="margin: 10px">Submit</button>
     </form>
 </div>
