@@ -29,4 +29,5 @@ function getComments($conn)
         echo $row['message'];
         echo "</div>";
     }
+
 }
