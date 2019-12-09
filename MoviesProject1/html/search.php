@@ -70,7 +70,7 @@ include "header.php";
 
         <?php
 
-        if (isset($_POST['submit-search'])) {
+        if (isset($_POST['submit-search']) ) {
             $search = mysqli_real_escape_string($conn, $_POST['search']);
 
             $sql = "SELECT * FROM tvseries where titleEN like '%$search%' 
