@@ -41,6 +41,15 @@ include_once 'connection.php';
                 </button>
 
             </div>
+            <div class="form">
+                <form class="form-inline my-2 my-lg-0" action="search.php" method="POST">
+                    <input class="form-control mr-sm-2" name="search" type="text" placeholder="Search..."
+                           aria-label="Search">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" name="submit-search" id="submit" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
             <ul class="md:flex hidden flex-wrap items-center justify-start text-white" data-menu>
                 <li class="md:px-6 py-2">
                     <a class="text-brand" href="index.php">Home</a>
@@ -57,6 +66,7 @@ include_once 'connection.php';
                 <li class="md:px-6 py-2">
                     <a href="contact.php">Contact</a>
                 </li>
+
             </ul>
         </div>
     </nav>
