@@ -127,6 +127,21 @@ function getSerialImageSrc($number) {
     }
 }
 
+function getSerialDesc($number)
+{
+    global $conn;
+
+    $sql = "SELECT * FROM tvseries where serialid = $number;";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+
+    if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            return $row['description'];
+        }
+    }
+}
+
 function getItemSrc($number)
 {
     global $conn;
@@ -144,7 +159,13 @@ function getItemSrc($number)
 
 function getMoviePage($number)
 {
-    return "item.php?id=" . $number;
+    return "play-movie.php?id=" . $number;
+}
+
+function getSerialPage($number)
+{
+    return "play-serial.php?id=" . $number;
+
 }
 
 

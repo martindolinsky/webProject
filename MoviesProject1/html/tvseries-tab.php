@@ -49,7 +49,7 @@ include_once 'connection.php';
                     <a href="movies-tab.php">Movies</a>
                 </li>
                 <li class="md:px-6 py-2">
-                    <a href="tvseries-tab.php">TV Series</a>
+                    <a href="movies-tab.php">TV Series</a>
                 </li>
                 <li class="md:px-6 py-2">
                     <a href="#">About Us</a>
@@ -68,7 +68,7 @@ include_once 'connection.php';
                 elit. Quo laboriosam quae mollitia voluptatibus placeat. Libero adipisci ipsam, nobis, corrupti nesciunt
                 id beatae laudantium quis dolorum aliquam impedit quae recusandae ad.</p>
             <a class="px-5 py-3 inline-block my-2 bg-orange-500 hover:bg-transparent hover:text-white transition-500 rounded-lg"
-               href="#movies-section">Movies</a>
+               href="#movies-section">TV Series</a>
         </div>
     </div>
 </header>
@@ -89,7 +89,7 @@ include_once 'connection.php';
     <?php
 
 
-    $sql = "select * from movies";
+    $sql = "select * from tvseries";
 
     $result = mysqli_query($conn, $sql);
     $queryResults = mysqli_num_rows($result);
@@ -99,20 +99,20 @@ include_once 'connection.php';
         // output data of each row
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\""
-                . getMoviePage($row['movieID']) . "\">\n"
+                . getSerialPage($row['serialID']) . "\">\n"
                 . "        <div style=\"border-radius: 10px;\"\n"
                 . "             class=\"absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center\">\n"
                 . "            <div>\n"
                 . "                <h3 class=\"text-lg mb-2\">"
-                . getMovieTitle($row['movieID']) . "\n"
+                . getSerialTitle($row['serialID']) . "\n"
                 . " "
-                . getMovieSecondTitle($row['movieID']) . "</h3>\n"
+                . getSerialSecondTitle($row['serialID']) . "</h3>\n"
                 . "                <p class=\"leading-normal\">"
-                . getMovieDesc($row['movieID']) . "</p>\n"
+                . getSerialDesc($row['serialID']) . "</p>\n"
                 . "            </div>\n"
                 . "        </div>\n"
                 . "        <img style=\"border-radius: 10px; height: 474.5px \" alt=\"#\" class=\"max-w-xs\" src=\""
-                . getMovieImageSrc($row['movieID']) . "\">\n"
+                . getSerialImageSrc($row['serialID']) . "\">\n"
                 . "    </a>";
 
         }
@@ -122,6 +122,7 @@ include_once 'connection.php';
 
 
     ?>
+
 
 </div>
 
@@ -198,3 +199,4 @@ include_once 'connection.php';
 <script src="../js/movies-tab.js"></script>
 </body>
 </html>
+

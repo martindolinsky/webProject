@@ -24,8 +24,8 @@ function getComments($conn)
     echo "<br>";
     while ($row = $resolut->fetch_assoc()) {
         echo "<div class='comment-box'>";
-        echo $row['userID'] . "<br>";
-        echo $row['date'] . "<br>";
+        echo "<h5 style='color: blue'>" . $row['userID'] . "<br>";
+        echo $row['date'] . "</h5>" . "<br>";
         echo $row['message'];
         echo "</div>";
     }

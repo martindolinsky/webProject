@@ -30,10 +30,11 @@
         <div class="row" style="display: flex; flex-direction: row; justify-content: center">
             <div class="row-grid">
 
-                <a href="item.php?id=1"><img src="<?php echo getMovieImageSrc(1) ?>" alt="<?php echo getMovieTitle(1);
+                <a href="play-movie.php?id=1"><img src="<?php echo getMovieImageSrc(1) ?>"
+                                                   alt="<?php echo getMovieTitle(1);
                     echo ' ';
                     echo getMovieSecondTitle(1) ?>"/></a>
-                <a href="item.php?id=1">
+                <a href="play-movie.php?id=1">
                         <?php
 
                          echo getMovieTitle(1) . "<br>";
@@ -46,10 +47,11 @@
             </div>
             <div class="row-grid">
 
-                <a href="item.php?id=2"><img src="<?php echo getMovieImageSrc(2) ?>" alt="<?php echo getMovieTitle(2);
+                <a href="play-movie.php?id=2"><img src="<?php echo getMovieImageSrc(2) ?>"
+                                                   alt="<?php echo getMovieTitle(2);
                     echo ' ';
                     echo getMovieSecondTitle(2) ?>" width="120"/></a>
-                <a href="item.php?id=2">
+                <a href="play-movie.php?id=2">
                         <?php
 
                         echo getMovieTitle(2) . "<br>";
@@ -62,10 +64,11 @@
             </div>
             <div class="row-grid">
 
-                <a href="item.php?id=3"><img src="<?php echo getMovieImageSrc(3) ?>" alt="<?php echo getMovieTitle(3);
+                <a href="play-movie.php?id=3"><img src="<?php echo getMovieImageSrc(3) ?>"
+                                                   alt="<?php echo getMovieTitle(3);
                     echo ' ';
                     echo getMovieSecondTitle(4) ?>" width="120"/></a>
-                <a href="item.php?id=3">
+                <a href="play-movie.php?id=3">
                         <?php
 
                         echo getMovieTitle(3) ."<br>";

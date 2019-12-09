@@ -1,57 +1,4 @@
 <?php
-//include "connection.php";
-//?>
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--<head>-->
-<!--    <link rel="stylesheet" type="text/css" href="css/index.css">-->
-<!--    <title>Article </title>-->
-<!--</head>-->
-<!--<body>-->
-<?php
-//include "header.php";
-//?>
-<!---->
-<?php
-//$title = mysqli_real_escape_string($conn, $_GET['id']);
-//
-//
-//
-//// show contacts
-//$sql = "select * from movies where movieID = $title";
-//
-//$result =  mysqli_query($conn,$sql);
-//$queryResults = mysqli_num_rows($result);
-//
-//if ($queryResults > 0) {
-//    // output data of each row
-//    while($row = mysqli_fetch_assoc($result)) {
-//        echo "<div><h1>" . "Title: " . $row["titleEN"]. " " . $row["secondTitleEN"]." (" . $row["titleSK"]. " " . $row["secondTitleSK"] . ")" . "</h1>" .
-//            "<h2>" . "Year: " . $row["year"] . "</h2>" .
-//            "<h3>" . "Directors: " . $row["director"] . "</h3>" .
-//            "<h3>" . "Stars: " . $row["actors"] . "</h3>" .
-//            "<h4>" . "About: " . $row["description"] . "</h4>"
-//
-//            ."</div>";
-//    }
-//} else {
-//    echo "0 results";
-//}
-//?>
-<!---->
-<!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"-->
-<!--        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"-->
-<!--        crossorigin="anonymous"></script>-->
-<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"-->
-<!--        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"-->
-<!--        crossorigin="anonymous"></script>-->
-<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"-->
-<!--        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"-->
-<!--        crossorigin="anonymous"></script>-->
-<!--</body>-->
-<!--</html> -->
-
-<?php
 date_default_timezone_set('America/Los_Angeles');
 include 'connection.php';
 include 'comments.inc.php';
@@ -82,8 +29,7 @@ include 'comments.inc.php';
         $title = mysqli_real_escape_string($conn, $_GET['id']);
 
 
-        // show contacts
-        $sql = "select * from movies where movieID = $title";
+        $sql = "select * from tvseries where serialID = $title";
 
         $result = mysqli_query($conn, $sql);
         $queryResults = mysqli_num_rows($result);
@@ -114,8 +60,7 @@ include "header.php"
         $title = mysqli_real_escape_string($conn, $_GET['id']);
 
 
-        // show contacts
-        $sql = "select * from movies where movieID = $title";
+        $sql = "select * from tvseries where serialID = $title";
 
         $result = mysqli_query($conn, $sql);
         $queryResults = mysqli_num_rows($result);
@@ -173,8 +118,7 @@ include "header.php"
     $title = mysqli_real_escape_string($conn, $_GET['id']);
 
 
-    // show contacts
-    $sql = "select * from movies where movieID = $title";
+    $sql = "select * from tvseries where serialID = $title";
 
     $result = mysqli_query($conn, $sql);
     $queryResults = mysqli_num_rows($result);
@@ -295,5 +239,6 @@ include "footer.php"
 ?>
 </body>
 </html>
+
 
 

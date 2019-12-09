@@ -18,7 +18,7 @@ include "header.php";
 ?>
 <div class="sep"></div>
 <div class="container1">
-<h1 style="color: #fff;">Results: </h1>
+    <h1 style="color: #fff;">Results Movies : </h1>
     <div class="row" style="display: flex; flex-direction: row; justify-content: center">
 
 
@@ -42,20 +42,60 @@ include "header.php";
 
                     echo '
                 <div class="row-grid" style="color: white;">
-                    <a href="item.php?id=' . $row["movieID"] . '">
+                    <a href="play-movie.php?id=' . $row["movieID"] . '">
                     <img src="' . getMovieImageSrc($row["movieID"]) . '" alt="' . getMovieTitle($row["movieID"]) . ' ' . getMovieSecondTitle($row["movieID"]) . '" width="120"/></a>
-                    <a href="item.php?id=' . $row["movieID"] . '"> ' . getMovieTitle($row["movieID"]) . '<br>' . getMovieSecondTitle($row["movieID"]) . '</a>
+                    <a href="play-movie.php?id=' . $row["movieID"] . '"> ' . getMovieTitle($row["movieID"]) . '<br>' . getMovieSecondTitle($row["movieID"]) . '</a>
                 </div>
     ';
                 }
 
             } else {
-                echo "There are no results matching your search:" . "$search";
+                echo "There are no results in movies matching your search: " . "$search";
             }
         }
         ?>
+    </div>
+</div>
+<br>
+<div class="sep"></div>
+<div class="sep"></div>
+<div class="sep"></div>
+<div class="sep"></div>
+<div class="container1">
+
+    <h1 style="color: #fff;">Results Serials : </h1>
+    <div class="row" style="display: flex; flex-direction: row; justify-content: center">
+
+        <?php
+
+        if (isset($_POST['submit-search'])) {
+            $search = mysqli_real_escape_string($conn, $_POST['search']);
+
+            $sql = "SELECT * FROM tvseries where titleEN like '%$search%' 
+                    OR secondTitleEN like '%$search%' OR secondTitleSK like '%$search%'
+            OR titleSK like '%$search%'";
+
+            $result = mysqli_query($conn, $sql);
+            $queryResult = mysqli_num_rows($result);
 
 
+            if ($queryResult > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+
+                    echo '
+            <div class="row-grid" style="color: white;">
+                <a href="play-serial.php?id=' . $row["serialID"] . '">
+                <img src="' . getSerialImageSrc($row["serialID"]) . '" alt="' . getSerialTitle($row["serialID"]) . ' ' . getSerialSecondTitle($row["serialID"]) . '" width="120"/></a>
+                <a href="play-serial.php?id=' . $row["serialID"] . '"> ' . getSerialTitle($row["serialID"]) . '<br>' . getSerialSecondTitle($row["serialID"]) . '</a>
+            </div>
+';
+                }
+
+            } else {
+                echo "There are no results in serials matching your search: " . "$search";
+            }
+        }
+        ?>
 </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -67,6 +107,7 @@ include "header.php";
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
+
 
 </body>
 </html>

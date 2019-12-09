@@ -6,6 +6,21 @@ body {
 }
 .navbar-dark {
     background-color: #222422;
+
+}
+
+.navbar-collapse {
+    flex-flow: row-reverse;
+    justify-content: space-around;
+}
+
+.right {
+    float: right;
+}
+
+header ul li {
+    float: right;
+    margin-right: 20px;
 }
 .slideshow {
     display: block;
@@ -23,6 +38,7 @@ body {
 }
 .sep {
     height: 100px;
+    margin-top: 20px;
 }
 .container1 {
     height: 1280px;
