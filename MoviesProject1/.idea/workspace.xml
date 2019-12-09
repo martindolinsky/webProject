@@ -2,15 +2,119 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fde2e78-4c4e-4b4d-a0ce-3984f855bb5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/comments.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/comments.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/play-movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/play-movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/play-serial.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/play-serial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/search.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/MoviesProject1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/item-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/movies-tab.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/comments.inc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/contact.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/contactform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/movies-tab.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/play-movie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/play-serial.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/search.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/tvseries-tab.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/bg-img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/loog-wp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/21-jump-street.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/22-jump-street.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/a_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/aiw_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/avengers-2012.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/avengers-age-of-ultron.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/avengers-endgame.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/avengers-infinity-war.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/batman-begins-2005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/batman-the-dark-knight-2008.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/batman-the-dark-knight-rises-2012.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/deadpool-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/deadpool.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/fight-club-1999.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/forrest-gump.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/frozen-2013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/frozen-two.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/green-mile-1999.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/inception-2010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/intouchables-2011.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/it-2017.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/it-chapter-two.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/joker-2019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/maleficent-2014.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/polar-express.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/schindlers-list-1993.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/spider-man-far-from-home-2019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/spider-man-homecoming-2017.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/spider-man-into-the-spider-verse-2017.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/spider-man-into-the-spider-verse-2018.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/the-dictator-2012.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/the-godfather-1972.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/the-godfather-1974.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/movies/z_1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/adventure-time-2010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/american-horror-story-2010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/black-mirror-2011.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/breaking-bad-2008.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/brooklyn-nine-nine-2013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/daybreak-2019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/euphoria-2019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/got-2011.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/his-dark-materials-2019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/la-casa-de-papel-2015.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/lucifer-2015.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/mr-bean-1990.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/mr-robot-2015.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/narcos-2015.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/peaky-blinders-2013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/rick-and-morty-2013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/riverdale-2017.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/see-2019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/sex-edu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/simpsons.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/south-park-1997.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/stranger-things-2016.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/tahm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/the-crown-2016.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/the-end-of-the-fucking-world-2017.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/the-flash-2014.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/the-walking-dead-2010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/the-witcher-2019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/vikings-2013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tvseries/watchmen-2019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/movies-tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,132 +125,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/index.php">
+        <entry file="file://$PROJECT_DIR$/html/comments.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-411">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#content#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#1;n#div#1;n#content#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#2;n#div#1;n#content#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/movies-tab.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/html/comments.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-              <folding>
-                <element signature="n#style#0;n#h5#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/play-serial.php">
+        <entry file="file://$PROJECT_DIR$/html/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/tvseries-tab.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/contact.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
-              <folding>
-                <element signature="n#style#0;n#h3#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/search.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="107" column="50" selection-start-line="107" selection-start-column="50" selection-end-line="107" selection-end-column="50" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/play-movie.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -216,17 +207,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="MoviesProject1" type="b2602c69:ProjectViewProjectNode" />
               <item name="MoviesProject1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MoviesProject1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MoviesProject1" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MoviesProject1" type="b2602c69:ProjectViewProjectNode" />
@@ -241,18 +228,12 @@
             <path>
               <item name="MoviesProject1" type="b2602c69:ProjectViewProjectNode" />
               <item name="MoviesProject1" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MoviesProject1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MoviesProject1" type="462c0819:PsiDirectoryNode" />
               <item name="webProject" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,6 +271,7 @@
       <workItem from="1574674955605" duration="9472000" />
       <workItem from="1575112249131" duration="15384000" />
       <workItem from="1575711365922" duration="34184000" />
+      <workItem from="1575907180617" duration="285000" />
     </task>
     <task id="LOCAL-00001" summary="work from 7.12.">
       <created>1575745186856</created>
@@ -323,18 +305,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120815000" />
+    <option name="totallyTimeSpent" value="122740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24391988" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24749643" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2759036" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4985694" visible="true" weight="0.2759036" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -344,7 +325,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50143063" side_tool="true" visible="true" weight="0.2759036" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.23734939" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -356,14 +337,15 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="added Jacob's part" />
     <MESSAGE value="work from 7.12." />
     <MESSAGE value="fixed some problems" />
     <MESSAGE value="created function getMoviePage($number)" />
     <MESSAGE value="fixed navbar (row-reverse)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed navbar (row-reverse)" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="master commit" />
+    <MESSAGE value="master commit try" />
+    <option name="LAST_COMMIT_MESSAGE" value="master commit try" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/embed.rnc">
@@ -467,19 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-411">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#content#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#div#1;n#content#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#2;n#div#1;n#content#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -547,11 +516,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/comments.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="n#style#0;n#h5#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
         </state>
       </provider>
     </entry>
