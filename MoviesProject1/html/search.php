@@ -7,6 +7,7 @@ include_once 'connection.php';
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -16,8 +17,7 @@ include_once 'connection.php';
 include "header.php";
 
 ?>
-<div class="sep"></div>
-<div class="main-container" style="display: flex; flex-direction: column; margin: 0 5%">
+<main class="main-container" style="display: flex; flex-direction: column; margin: 100px 5%">
 
         <?php
 
@@ -111,7 +111,7 @@ include "header.php";
         }
         ?>
 
-</div>
+</main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -123,6 +123,4 @@ include "header.php";
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
 
-
-</body>
-</html>
+<?php include "footer.php"; ?>

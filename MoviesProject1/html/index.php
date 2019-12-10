@@ -7,26 +7,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body style="margin: 0;">
-<div class="sep"></div>
 <?php include 'header.php';?>
 
 
-<content>
-    <div class="sep"></div>
-    <div class="slideshow  w3-display-container">
+<main>
+
+    <div class="slideshow  w3-display-container" style="margin-top: 100px">
         <a href="play-movie.php?id=2"><img class="mySlides" src="../img/movies/a_1920.jpg" style="width:100%"></a>
         <a href="play-movie.php?id=4"><img class="mySlides" src="../img/movies/aiw_1920.jpg" style="width:100%"></a>
         <a href="play-movie.php?id=16"><img class="mySlides" src="../img/movies/z_1920.jpg" style="width:100%"></a>
     </div>
-    <div class="sep"></div>
     <div class="container1">
 
         <div class="row" style="display: flex; flex-direction: row; justify-content: center">
+
             <div class="row-grid">
 
                 <a href="play-movie.php?id=1"><img src="<?php echo getMovieImageSrc(1) ?>"
@@ -44,6 +44,7 @@
                     </a>
 
             </div>
+
             <div class="row-grid">
 
                 <a href="play-movie.php?id=2"><img src="<?php echo getMovieImageSrc(2) ?>"
@@ -61,6 +62,7 @@
 
 
             </div>
+
             <div class="row-grid">
 
                 <a href="play-movie.php?id=3"><img src="<?php echo getMovieImageSrc(3) ?>"
@@ -77,6 +79,7 @@
                     </a>
 
             </div>
+
             <div class="row-grid">
 
                     <a href=""><img src="<?php echo getMovieImageSrc(4) ?>" alt="<?php echo getMovieTitle(4); echo ' '; echo getMovieSecondTitle(4) ?>" width="120"/></a>
@@ -90,6 +93,7 @@
                     </a>
 
             </div>
+
             <div class="row-grid">
 
                     <a href=""><img src="<?php echo getMovieImageSrc(5) ?>" alt="<?php echo getMovieTitle(5); echo ' '; echo getMovieSecondTitle(5)?>" width="120"/></a>
@@ -104,6 +108,7 @@
 
 
             </div>
+
             <div class="row-grid">
 
                 <a href=""><img src="<?php echo getMovieImageSrc(6) ?>" alt="<?php echo getMovieTitle(6); echo ' '; echo getMovieSecondTitle(6)?>" width="120"/></a>
@@ -118,6 +123,7 @@
 
 
             </div>
+
             <div class="row-grid">
 
                 <a href=""><img src="<?php echo getMovieImageSrc(7) ?>" alt="<?php echo getMovieTitle(7); echo ' '; echo getMovieSecondTitle(7)?>" width="120"/></a>
@@ -131,6 +137,7 @@
                 </a>
 
             </div>
+
             <div class="row-grid">
 
                 <a href=""><img src="<?php echo getMovieImageSrc(8) ?>" alt="<?php echo getMovieTitle(8); echo ' '; echo getMovieSecondTitle(8)?>" width="120"/></a>
@@ -144,6 +151,7 @@
                 </a>
 
             </div>
+
             <div class="row-grid1">
 
                 <a href=""><img src="<?php echo getMovieImageSrc(9) ?>" alt="<?php echo getMovieTitle(9); echo ' '; echo getMovieSecondTitle(9)?>" width="120"/></a>
@@ -157,6 +165,7 @@
                 </a>
 
             </div>
+
             <div class="row-grid2">
 
                 <a href=""><img src="<?php echo getMovieImageSrc(10) ?>" alt="<?php echo getMovieTitle(10); echo ' '; echo getMovieSecondTitle(10)?>" width="120"/></a>
@@ -170,6 +179,7 @@
                 </a>
 
             </div>
+
             <div class="row-grid-last">
 
                 <a href=""><img src="<?php echo getMovieImageSrc(11) ?>" alt="<?php echo getMovieTitle(11); echo ' '; echo getMovieSecondTitle(11)?>" width="120"/></a>
@@ -181,16 +191,14 @@
 
                     ?>
                 </a>
-
             </div>
         </div>
 
-        <div class="sep"></div>
-        <button type="button" class="moreMovies btn btn-lg "><a class="more" href="movies-tab.php">More movies</a>
+        <button style="margin-top: 100px" type="button" class="moreMovies btn btn-lg "><a class="more" href="movies-tab.php">More movies</a>
         </button>
-        <div class="sep"></div>
 
-        <div class="row row2" style="display: flex; flex-direction: row; justify-content: center">
+        <div class="row row2" style="margin-top: 100px;display: flex; flex-direction: row; justify-content: center">
+
             <div class="row-grid">
 
                 <a href=""><img src="<?php echo getSerialImageSrc(1) ?>" alt="<?php echo getSerialTitle(1);
@@ -206,6 +214,7 @@
                 </a>
 
             </div>
+
             <div class="row-grid">
 
                 <a href=""><img src="<?php echo getSerialImageSrc(2) ?>" alt="<?php echo getSerialTitle(2);
@@ -221,6 +230,7 @@
                 </a>
 
             </div>
+
             <div class="row-grid">
 
                 <a href=""><img src="<?php echo getSerialImageSrc(3) ?>" alt="<?php echo getSerialTitle(3);
@@ -236,6 +246,7 @@
                 </a>
 
             </div>
+
             <div class="row-grid">
 
                 <a href=""><img src="<?php echo getSerialImageSrc(4) ?>" alt="<?php echo getSerialTitle(4);
@@ -251,6 +262,7 @@
                 </a>
 
             </div>
+
             <div class="row-grid">
 
                 <a href=""><img src="<?php echo getSerialImageSrc(5) ?>" alt="<?php echo getSerialTitle(5);
@@ -282,6 +294,7 @@
                 </a>
 
             </div>
+
             <div class="row-grid">
 
                 <a href=""><img src="<?php echo getSerialImageSrc(7) ?>" alt="<?php echo getSerialTitle(7);
@@ -297,6 +310,7 @@
                 </a>
 
             </div>
+
             <div class="row-grid">
 
                 <a href=""><img src="<?php echo getSerialImageSrc(8) ?>" alt="<?php echo getSerialTitle(8);
@@ -312,6 +326,7 @@
                 </a>
 
             </div>
+
             <div class="row-grid1">
 
                 <a href=""><img src="<?php echo getSerialImageSrc(9) ?>" alt="<?php echo getSerialTitle(9);
@@ -327,6 +342,7 @@
                 </a>
 
             </div>
+
             <div class="row-grid2">
 
                 <a href=""><img src="<?php echo getSerialImageSrc(10) ?>" alt="<?php echo getSerialTitle(10);
@@ -342,6 +358,7 @@
                 </a>
 
             </div>
+
             <div class="row-grid-last">
 
                 <a href=""><img src="<?php echo getSerialImageSrc(11) ?>" alt="<?php echo getSerialTitle(11);
@@ -357,20 +374,15 @@
                 </a>
 
             </div>
+
         </div>
-        <div class="sep"></div>
-        <button type="button" class="moreMovies btn btn-lg "><a class="more" href="movies-tab.php">More serials</a>
+
+        <button style="margin-top: 100px; margin-bottom: 100px"  type="button" class="moreMovies btn btn-lg "><a class="more" href="tvseries-tab.php">More serials</a>
         </button>
     </div>
-    <div class="sep"></div>
-    <div class="sep"></div>
-    <div class="sep"></div>
-    <div class="sep"></div>
-    <div class="sep"></div>
 
-    <?php include 'footer.php';?>
-</content>
-
+</main>
+<?php include 'footer.php';?>
 
 <script>
     var slideIndex = 0;
@@ -388,7 +400,7 @@
             slideIndex = 1
         }
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showDivs, 3000);
+        setTimeout(showDivs, 5000);
 
     }
 
@@ -402,5 +414,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-</body>
-</html>
+

@@ -5,14 +5,14 @@ include_once 'connection.php';
 <html>
 <head>
     <title>Contact</title>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
-<body style="margin: 0;">
-<div class="sep"></div>
+<body style="margin: 0; min-height: 100vh">
 <?php include 'header.php';?>
-<div class="sep"></div>
-<div class="container1" style="background-color: #363836;color: #fff; height: 700px;margin: 0 20%;">
+
+<div class="container1" style="background-color: #363836;color: #fff; height: 700px;margin: 100px 20%;">
     <form class="contact-form" action="contactform.php" method="post" style="display: flex; flex-direction: column;align-items: center">
         <h3 style="padding-top: 20px;">First name:</h3>
         <input style="width: 50%; margin: 10px; padding: 5px; border-radius: 10px; border: 2px solid black; font-size: 1.5em"
