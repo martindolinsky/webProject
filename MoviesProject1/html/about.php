@@ -23,17 +23,17 @@ include "header.php";
     <div class="container1">
         <div class="row" style="display: flex; flex-direction: row; justify-content: center">
             <div class="row-grid">
-                <img src="../img/movies/joker-2019.jpg" alt="Dolinsky">
+                <img src="../img/us/dolinsky.jpeg" alt="Dolinsky">
                 <div>Martin Dolinsky</div>
             </div>
 
             <div class="row-grid">
-                <img src="../img/movies/joker-2019.jpg" alt="Kutka">
+                <img src="../img/us/dolinsky.jpeg" alt="Kutka">
                 <div>Jakub Kutka</div>
             </div>
 
             <div class="row-grid">
-                <img src="../img/movies/joker-2019.jpg" alt="Matysko">
+                <img src="../img/us/dolinsky.jpeg" alt="Matysko">
                 <div>Damian Matysko</div>
             </div>
         </div>

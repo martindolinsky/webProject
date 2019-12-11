@@ -8,9 +8,9 @@ include_once 'connection.php';
     <meta charset="UTF-8">
     <title>Homepage</title>
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../css/index.css" />
 </head>
 <body style="margin: 0;">
 <?php
@@ -35,7 +35,7 @@ include "header.php";
 
             if ($queryResult > 0) {
                 echo '
-                <div class="container2">
+                <div class="container2" style="text-align: center">
             <h1 style="color: #fff;">Results in Movies : </h1>
             <div class="row" style="display: flex; flex-direction: row; justify-content: center">
                 
@@ -84,9 +84,9 @@ include "header.php";
             if ($queryResult > 0) {
                 echo '
 
-                <div class="container2">
+                <div class="container2" style="text-align: center">
 
-    <h1 style="color: #fff;">Results in TV Series : </h1>
+    <h1 style="color: #fff;">Results in TV Series: </h1>
     <div class="row" style="display: flex; flex-direction: row; justify-content: center">
                 ';
                 while ($row = mysqli_fetch_assoc($result)) {

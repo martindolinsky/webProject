@@ -6,14 +6,12 @@ function setComments($conn)
 
         $uid = $_POST['userID'];
         $date = $_POST['date'];
-        $message = $_POST['message'];
+        $message = htmlspecialchars($_POST['message']);
 
         if (isset($_POST['commentSubmit'])) {
             $sql = "INSERT INTO comments (userID, date, message) VALUES ('$uid', '$date','$message')";
             $result = $conn->query($sql);
         }
-
-
     }
 }
 

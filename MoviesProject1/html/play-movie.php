@@ -52,9 +52,8 @@ include 'comments.inc.php';
 <?php
 include "header.php"
 ?>
-<div class="sep" style="height: 100px;"></div>
 <!-- video -->
-<div class="trailer">
+<div class="trailer"  style="margin-top: 100px">
     <iframe
         <?php
         $title = mysqli_real_escape_string($conn, $_GET['id']);
@@ -131,7 +130,8 @@ include "header.php"
                 "<h2>" . $row["year"] . "</h2>" .
                 "<h5>" . "Directors: " . $row["director"] . "</h5>" .
                 "<h5>" . "Stars: " . $row["actors"] . "</h5>" . "<br>" .
-                "<p style='color: lightgray'>" . $row["description"] . "</p>"
+                "<p style='color: lightgray'>" . $row["description"] . "</p>" .
+                "<p style='color: lightgray'>Length: " . $row["length"]  . " min</p>"
 
                 . "</div>";
         }
