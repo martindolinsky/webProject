@@ -56,10 +56,7 @@ header ul li {
     color: #fff;
 }
 
-
-
-.row-grid, .row-grid1, .row-grid2,
-.row-grid-last  {
+.row-grid {
     background-color: #363836;
     border-radius: 10px;
     margin: 10px;
@@ -67,17 +64,18 @@ header ul li {
     height: 300px;
     width: 200px;
     flex-direction: column;
+    align-items: center;
     text-align: center;
 }
-.row-grid img, .row-grid1 img,
-.row-grid2 img, .row-grid-last img {
+
+.row-grid img {
     border-radius: 10px;
     width: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.row-grid a:hover, .row-grid1 a:hover,
-.row-grid2 a:hover, .row-grid-last a:hover {
+
+.row-grid a:hover {
     text-decoration: none;
     color: red;
 }

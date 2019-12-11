@@ -8,9 +8,10 @@
     <meta charset="UTF-8">
     <title>Homepage</title>
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <link rel="stylesheet" href="../css/index.css" />
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../css/index.css" />
 </head>
 <body style="margin: 0;">
 <?php include 'header.php';?>
@@ -27,358 +28,58 @@
 
         <div class="row" style="display: flex; flex-direction: row; justify-content: center">
 
-            <div class="row-grid">
+            <?php
+            $sql = "SELECT * FROM movies order by year desc limit 10";
+            $result = mysqli_query($conn,$sql);
+            $queryResult = mysqli_num_rows($result);
 
-                <a href="play-movie.php?id=1"><img src="<?php echo getMovieImageSrc(1) ?>"
-                                                   alt="<?php echo getMovieTitle(1);
-                    echo ' ';
-                    echo getMovieSecondTitle(1) ?>"/></a>
-                <a href="play-movie.php?id=1">
-                        <?php
+            if ($queryResult > 0) {
 
-                         echo getMovieTitle(1) . "<br>";
-                        echo getMovieSecondTitle(1);
+                while ($row = mysqli_fetch_assoc($result)) {
 
-                        ?>
-
-                    </a>
-
-            </div>
-
-            <div class="row-grid">
-
-                <a href="play-movie.php?id=2"><img src="<?php echo getMovieImageSrc(2) ?>"
-                                                   alt="<?php echo getMovieTitle(2);
-                    echo ' ';
-                    echo getMovieSecondTitle(2) ?>" width="120"/></a>
-                <a href="play-movie.php?id=2">
-                        <?php
-
-                        echo getMovieTitle(2) . "<br>";
-                        echo getMovieSecondTitle(2);
-
-                        ?>
-                    </a>
+                    echo '
+                    <div class="row-grid">
+                        <a href="play-movie.php?id=' . $row["movieID"] . '"><img src="' . getMovieImageSrc($row["movieID"]).'" alt="' .getMovieTitle($row["movieID"]) .'" 
+                            ' . getMovieSecondTitle($row["movieID"]) . '"/></a>
+                        <a href="play-movie.php?id='. $row["movieID"] .'">
+                                 ' . getMovieTitle($row["movieID"]) . '<br>
+                                ' . getMovieSecondTitle($row["movieID"]) .' </a>
+                    </div>
+                    ';
+                }
+            }
+            ?>
 
 
-            </div>
-
-            <div class="row-grid">
-
-                <a href="play-movie.php?id=3"><img src="<?php echo getMovieImageSrc(3) ?>"
-                                                   alt="<?php echo getMovieTitle(3);
-                    echo ' ';
-                    echo getMovieSecondTitle(4) ?>" width="120"/></a>
-                <a href="play-movie.php?id=3">
-                        <?php
-
-                        echo getMovieTitle(3) ."<br>";
-                        echo getMovieSecondTitle(3);
-
-                        ?>
-                    </a>
-
-            </div>
-
-            <div class="row-grid">
-
-                    <a href=""><img src="<?php echo getMovieImageSrc(4) ?>" alt="<?php echo getMovieTitle(4); echo ' '; echo getMovieSecondTitle(4) ?>" width="120"/></a>
-                    <a href="">
-                        <?php
-
-                        echo getMovieTitle(4) . '<br>';
-                        echo getMovieSecondTitle(4);
-
-                        ?>
-                    </a>
-
-            </div>
-
-            <div class="row-grid">
-
-                    <a href=""><img src="<?php echo getMovieImageSrc(5) ?>" alt="<?php echo getMovieTitle(5); echo ' '; echo getMovieSecondTitle(5)?>" width="120"/></a>
-                    <a href="">
-                        <?php
-
-                        echo getMovieTitle(5) . '<br>';
-                        echo getMovieSecondTitle(5);
-
-                        ?>
-                    </a>
-
-
-            </div>
-
-            <div class="row-grid">
-
-                <a href=""><img src="<?php echo getMovieImageSrc(6) ?>" alt="<?php echo getMovieTitle(6); echo ' '; echo getMovieSecondTitle(6)?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getMovieTitle(6) . "<br>";
-                    echo getMovieSecondTitle(6);
-
-                    ?>
-                </a>
-
-
-            </div>
-
-            <div class="row-grid">
-
-                <a href=""><img src="<?php echo getMovieImageSrc(7) ?>" alt="<?php echo getMovieTitle(7); echo ' '; echo getMovieSecondTitle(7)?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getMovieTitle(7) . '<br>';
-                    echo getMovieSecondTitle(7);
-
-                    ?>
-                </a>
-
-            </div>
-
-            <div class="row-grid">
-
-                <a href=""><img src="<?php echo getMovieImageSrc(8) ?>" alt="<?php echo getMovieTitle(8); echo ' '; echo getMovieSecondTitle(8)?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getMovieTitle(8) . '<br>';
-                    echo getMovieSecondTitle(8);
-
-                    ?>
-                </a>
-
-            </div>
-
-            <div class="row-grid1">
-
-                <a href=""><img src="<?php echo getMovieImageSrc(9) ?>" alt="<?php echo getMovieTitle(9); echo ' '; echo getMovieSecondTitle(9)?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getMovieTitle(9) . '<br>';
-                    echo getMovieSecondTitle(9);
-
-                    ?>
-                </a>
-
-            </div>
-
-            <div class="row-grid2">
-
-                <a href=""><img src="<?php echo getMovieImageSrc(10) ?>" alt="<?php echo getMovieTitle(10); echo ' '; echo getMovieSecondTitle(10)?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getMovieTitle(10) . '<br>';
-                    echo getMovieSecondTitle(10);
-
-                    ?>
-                </a>
-
-            </div>
-
-            <div class="row-grid-last">
-
-                <a href=""><img src="<?php echo getMovieImageSrc(11) ?>" alt="<?php echo getMovieTitle(11); echo ' '; echo getMovieSecondTitle(11)?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getMovieTitle(11) . '<br>';
-                    echo getMovieSecondTitle(11);
-
-                    ?>
-                </a>
-            </div>
         </div>
 
-        <button style="margin-top: 100px" type="button" class="moreMovies btn btn-lg "><a class="more" href="movies-tab.php">More movies</a>
-        </button>
+        <button style="margin-top: 100px" type="button" class="moreMovies btn btn-lg "><a class="more" href="movies-tab.php">More movies</a></button>
 
         <div class="row row2" style="margin-top: 100px;display: flex; flex-direction: row; justify-content: center">
 
-            <div class="row-grid">
+            <?php
+            $sql = "SELECT * FROM tvseries order by year desc limit 10";
+            $result = mysqli_query($conn,$sql);
+            $queryResult = mysqli_num_rows($result);
 
-                <a href=""><img src="<?php echo getSerialImageSrc(1) ?>" alt="<?php echo getSerialTitle(1);
-                    echo ' ';
-                    echo getSerialSecondTitle(1) ?>" width="120"/></a>
-                <a href="">
-                    <?php
+            if ($queryResult > 0) {
 
-                    echo getSerialTitle(1) . '<br>';
-                    echo getSerialSecondTitle(1);
-
-                    ?>
-                </a>
-
-            </div>
-
-            <div class="row-grid">
-
-                <a href=""><img src="<?php echo getSerialImageSrc(2) ?>" alt="<?php echo getSerialTitle(2);
-                    echo ' ';
-                    echo getSerialSecondTitle(2) ?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getSerialTitle(2) . '<br>';
-                    echo getSerialSecondTitle(2);
-
-                    ?>
-                </a>
-
-            </div>
-
-            <div class="row-grid">
-
-                <a href=""><img src="<?php echo getSerialImageSrc(3) ?>" alt="<?php echo getSerialTitle(3);
-                    echo ' ';
-                    echo getSerialSecondTitle(3) ?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getSerialTitle(3) . '<br>';
-                    echo getSerialSecondTitle(3);
-
-                    ?>
-                </a>
-
-            </div>
-
-            <div class="row-grid">
-
-                <a href=""><img src="<?php echo getSerialImageSrc(4) ?>" alt="<?php echo getSerialTitle(4);
-                    echo ' ';
-                    echo getSerialSecondTitle(4) ?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getSerialTitle(4) . '<br>';
-                    echo getSerialSecondTitle(4);
-
-                    ?>
-                </a>
-
-            </div>
-
-            <div class="row-grid">
-
-                <a href=""><img src="<?php echo getSerialImageSrc(5) ?>" alt="<?php echo getSerialTitle(5);
-                    echo ' ';
-                    echo getSerialSecondTitle(5) ?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getSerialTitle(5) . '<br>';
-                    echo getSerialSecondTitle(5);
-
-                    ?>
-                </a>
-
-            </div>
-
-            <div class="row-grid">
-
-                <a href=""><img src="<?php echo getSerialImageSrc(6) ?>" alt="<?php echo getSerialTitle(6);
-                    echo ' ';
-                    echo getSerialSecondTitle(6) ?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getSerialTitle(6) . '<br>';
-                    echo getSerialSecondTitle(6);
-
-                    ?>
-                </a>
-
-            </div>
-
-            <div class="row-grid">
-
-                <a href=""><img src="<?php echo getSerialImageSrc(7) ?>" alt="<?php echo getSerialTitle(7);
-                    echo ' ';
-                    echo getSerialSecondTitle(7) ?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getSerialTitle(7) . '<br>';
-                    echo getSerialSecondTitle(7);
-
-                    ?>
-                </a>
-
-            </div>
-
-            <div class="row-grid">
-
-                <a href=""><img src="<?php echo getSerialImageSrc(8) ?>" alt="<?php echo getSerialTitle(8);
-                    echo ' ';
-                    echo getSerialSecondTitle(8) ?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getSerialTitle(8) . '<br>';
-                    echo getSerialSecondTitle(8);
-
-                    ?>
-                </a>
-
-            </div>
-
-            <div class="row-grid1">
-
-                <a href=""><img src="<?php echo getSerialImageSrc(9) ?>" alt="<?php echo getSerialTitle(9);
-                    echo ' ';
-                    echo getSerialSecondTitle(9) ?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getSerialTitle(9) . '<br>';
-                    echo getSerialSecondTitle(9);
-
-                    ?>
-                </a>
-
-            </div>
-
-            <div class="row-grid2">
-
-                <a href=""><img src="<?php echo getSerialImageSrc(10) ?>" alt="<?php echo getSerialTitle(10);
-                    echo ' ';
-                    echo getSerialSecondTitle(10) ?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getSerialTitle(10) . '<br>';
-                    echo getSerialSecondTitle(10);
-
-                    ?>
-                </a>
-
-            </div>
-
-            <div class="row-grid-last">
-
-                <a href=""><img src="<?php echo getSerialImageSrc(11) ?>" alt="<?php echo getSerialTitle(11);
-                    echo ' ';
-                    echo getSerialSecondTitle(11) ?>" width="120"/></a>
-                <a href="">
-                    <?php
-
-                    echo getSerialTitle(11) . '<br>';
-                    echo getSerialSecondTitle(11);
-
-                    ?>
-                </a>
-
-            </div>
-
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '
+                    <div class="row-grid">
+                        <a href="play-serial.php?id=' . $row["serialID"] . '"><img src="' . getSerialImageSrc($row["serialID"]).'" alt="' .getSerialTitle($row["serialID"]) .'" 
+                            ' . getSerialSecondTitle($row["serialID"]) . '"/></a>
+                        <a href="play-serial.php?id='. $row["serialID"] .'">
+                                 ' . getSerialTitle($row["serialID"]) . '<br>
+                                ' . getSerialSecondTitle($row["serialID"]) .' </a>
+                    </div>
+                    ';
+                }
+            }
+            ?>
         </div>
 
-        <button style="margin-top: 100px; margin-bottom: 100px"  type="button" class="moreMovies btn btn-lg "><a class="more" href="tvseries-tab.php">More serials</a>
-        </button>
+        <button style="margin-top: 100px; margin-bottom: 100px"  type="button" class="moreMovies btn btn-lg "><a class="more" href="tvseries-tab.php">More serials</a></button>
     </div>
 
 </main>
@@ -387,7 +88,6 @@
 <script>
     var slideIndex = 0;
     showDivs();
-
 
     function showDivs() {
         var i;
@@ -401,7 +101,6 @@
         }
         slides[slideIndex - 1].style.display = "block";
         setTimeout(showDivs, 5000);
-
     }
 
 </script>
