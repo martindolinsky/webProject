@@ -41,6 +41,15 @@ include_once 'connection.php';
                 </button>
 
             </div>
+            <div class="form">
+                <form class="form-inline my-2 my-lg-0" action="search.php" method="POST">
+                    <input class="form-control mr-sm-2" name="search" type="text" placeholder="Search..."
+                           aria-label="Search">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" name="submit-search" id="submit" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
             <ul class="md:flex hidden flex-wrap items-center justify-start text-white" data-menu>
                 <li class="md:px-6 py-2">
                     <a class="text-brand" href="index.php">Home</a>
@@ -49,14 +58,15 @@ include_once 'connection.php';
                     <a href="movies-tab.php">Movies</a>
                 </li>
                 <li class="md:px-6 py-2">
-                    <a href="movies-tab.php">TV Series</a>
+                    <a href="tvseries-tab.php">TV Series</a>
                 </li>
                 <li class="md:px-6 py-2">
-                    <a href="#">About Us</a>
+                    <a href="about.php">About Us</a>
                 </li>
                 <li class="md:px-6 py-2">
                     <a href="contact.php">Contact</a>
                 </li>
+
             </ul>
         </div>
     </nav>
@@ -68,10 +78,11 @@ include_once 'connection.php';
                 elit. Quo laboriosam quae mollitia voluptatibus placeat. Libero adipisci ipsam, nobis, corrupti nesciunt
                 id beatae laudantium quis dolorum aliquam impedit quae recusandae ad.</p>
             <a class="px-5 py-3 inline-block my-2 bg-orange-500 hover:bg-transparent hover:text-white transition-500 rounded-lg"
-               href="#movies-section">TV Series</a>
+               href="#movies-section">Movies</a>
         </div>
     </div>
 </header>
+
 
 <div class="container mx-auto my-6 lg:px-16 px-4">
     <ul class="flex items-center leading-normal text-gray-500 font-alt">

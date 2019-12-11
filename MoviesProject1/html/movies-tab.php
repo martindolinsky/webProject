@@ -61,7 +61,7 @@ include_once 'connection.php';
                     <a href="tvseries-tab.php">TV Series</a>
                 </li>
                 <li class="md:px-6 py-2">
-                    <a href="#">About Us</a>
+                    <a href="about.php">About Us</a>
                 </li>
                 <li class="md:px-6 py-2">
                     <a href="contact.php">Contact</a>

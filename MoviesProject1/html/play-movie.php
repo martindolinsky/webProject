@@ -165,56 +165,27 @@ include "header.php"
 
 <!-- obsah -->
 <div class="content">
-    <div class="row-grid">
+    <?php
+    $sql = "SELECT * FROM movies order by year DESC limit 3";
+    $result = mysqli_query($conn,$sql);
+    $queryResult = mysqli_num_rows($result);
 
-        <a href=""><img src="<?php echo getMovieImageSrc(1) ?>" alt="<?php echo getMovieTitle(1);
-            echo ' ';
-            echo getMovieSecondTitle(1) ?>"/></a>
-        <a href="">
-            <?php
+    if ($queryResult > 0) {
 
-            echo getMovieTitle(1) . "<br>";
-            echo getMovieSecondTitle(1);
+        while ($row = mysqli_fetch_assoc($result)) {
 
-            ?>
-
-        </a>
-
-    </div>
-
-    <div class="row-grid">
-
-        <a href=""><img src="<?php echo getMovieImageSrc(2) ?>" alt="<?php echo getMovieTitle(2);
-            echo ' ';
-            echo getMovieSecondTitle(2) ?>"/></a>
-        <a href="">
-            <?php
-
-            echo getMovieTitle(2) . "<br>";
-            echo getMovieSecondTitle(2);
-
-            ?>
-
-        </a>
-
-    </div>
-
-    <div class="row-grid">
-
-        <a href=""><img src="<?php echo getMovieImageSrc(3) ?>" alt="<?php echo getMovieTitle(3);
-            echo ' ';
-            echo getMovieSecondTitle(3) ?>"/></a>
-        <a href="">
-            <?php
-
-            echo getMovieTitle(3) . "<br>";
-            echo getMovieSecondTitle(3);
-
-            ?>
-
-        </a>
-
-    </div>
+            echo '
+                    <div class="row-grid">
+                        <a href="play-movie.php?id=' . $row["movieID"] . '"><img src="' . getMovieImageSrc($row["movieID"]).'" alt="' .getMovieTitle($row["movieID"]) .'" 
+                            ' . getMovieSecondTitle($row["movieID"]) . '"/></a>
+                        <a href="play-movie.php?id='. $row["movieID"] .'">
+                                 ' . getMovieTitle($row["movieID"]) . '<br>
+                                ' . getMovieSecondTitle($row["movieID"]) .' </a>
+                    </div>
+                    ';
+        }
+    }
+    ?>
 </div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

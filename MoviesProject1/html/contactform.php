@@ -8,15 +8,13 @@ if (isset($_POST['submit'])) {
 
     $mailTo = "martin.dolinsky@akademiasovy.sk";
 
-    $headers = "From: MovieTrailers" . $mailFrom;
+    $headers = "From: " . $mailFrom;
     $txt = "You have received an email from " . $firstName . " " . $lastName . ".\n\n".$message;
 
 
-    mail($mailTo,"MovieTrailers",txt,$headers);
+    mail($mailTo,"MovieTrailers ",$txt,$headers);
 
     header('Location: index.php?mailSend');
 
 }
 
-
-?>
