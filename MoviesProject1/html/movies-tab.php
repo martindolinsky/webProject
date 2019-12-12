@@ -97,16 +97,11 @@ include_once 'connection.php';
 
     <!--    need to fix this!!!-->
     <?php
-
-
     $sql = "select * from movies";
-
     $result = mysqli_query($conn, $sql);
     $queryResults = mysqli_num_rows($result);
 
-
     if ($queryResults > 0) {
-        // output data of each row
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\""
                 . getMoviePage($row['movieID']) . "\">\n"
@@ -124,13 +119,10 @@ include_once 'connection.php';
                 . "        <img style=\"border-radius: 10px; height: 474.5px \" alt=\"#\" class=\"max-w-xs\" src=\""
                 . getMovieImageSrc($row['movieID']) . "\">\n"
                 . "    </a>";
-
         }
     } else {
         echo "0 results";
     }
-
-
     ?>
 
 </div>

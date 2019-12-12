@@ -16,7 +16,6 @@ include_once 'connection.php';
 <body style="margin: 0;">
 <?php
 include "header.php";
-
 ?>
 <main>
 
@@ -33,7 +32,7 @@ include "header.php";
             </div>
 
             <div class="row-grid">
-                <img src="../img/us/dolinsky.jpeg" alt="Matysko">
+                <img src="../img/us/matysko.jpg" alt="Matysko">
                 <div>Damian Matysko</div>
             </div>
         </div>

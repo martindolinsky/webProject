@@ -4,18 +4,14 @@ $dbServername = 'localhost';
 $dbUsername = 'root';
 $dbPassword = 'root';
 $dbName = 'movieDatabase';
-
 $conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
-
 
 if ($conn -> error) {
     die("could not connect successfully");
 }
 
-
 function getMovieTitle($number) {
     global $conn;
-
     $sql = "SELECT * FROM movies where movieid = $number;";
     $result = mysqli_query($conn,$sql);
     $resultCheck = mysqli_num_rows($result);
@@ -29,7 +25,6 @@ function getMovieTitle($number) {
 
 function getMovieSecondTitle($number) {
     global $conn;
-
     $sql = "SELECT * FROM movies where movieid = $number;";
     $result = mysqli_query($conn,$sql);
     $resultCheck = mysqli_num_rows($result);
@@ -41,10 +36,8 @@ function getMovieSecondTitle($number) {
     }
 }
 
-function getMovieDesc($number)
-{
+function getMovieDesc($number) {
     global $conn;
-
     $sql = "SELECT * FROM movies where movieid = $number;";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
@@ -56,10 +49,8 @@ function getMovieDesc($number)
     }
 }
 
-function getMovieRating($number)
-{
+function getMovieRating($number) {
     global $conn;
-
     $sql = "SELECT * FROM movies where movieid = $number;";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
@@ -73,7 +64,6 @@ function getMovieRating($number)
 
 function getMovieImageSrc($number) {
     global $conn;
-
     $sql = "SELECT * FROM movies where movieid = $number;";
     $result = mysqli_query($conn,$sql);
     $resultCheck = mysqli_num_rows($result);
@@ -87,7 +77,6 @@ function getMovieImageSrc($number) {
 
 function getSerialTitle($number) {
     global $conn;
-
     $sql = "SELECT * FROM tvseries where serialid = $number;";
     $result = mysqli_query($conn,$sql);
     $resultCheck = mysqli_num_rows($result);
@@ -101,7 +90,6 @@ function getSerialTitle($number) {
 
 function getSerialSecondTitle($number) {
     global $conn;
-
     $sql = "SELECT * FROM tvseries where serialid = $number;";
     $result = mysqli_query($conn,$sql);
     $resultCheck = mysqli_num_rows($result);
@@ -115,7 +103,6 @@ function getSerialSecondTitle($number) {
 
 function getSerialImageSrc($number) {
     global $conn;
-
     $sql = "SELECT * FROM tvseries where serialid = $number;";
     $result = mysqli_query($conn,$sql);
     $resultCheck = mysqli_num_rows($result);
@@ -127,10 +114,8 @@ function getSerialImageSrc($number) {
     }
 }
 
-function getSerialDesc($number)
-{
+function getSerialDesc($number) {
     global $conn;
-
     $sql = "SELECT * FROM tvseries where serialid = $number;";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
@@ -145,7 +130,6 @@ function getSerialDesc($number)
 function getItemSrc($number)
 {
     global $conn;
-
     $sql = "SELECT * FROM movies where movieid = $number;";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
@@ -157,13 +141,11 @@ function getItemSrc($number)
     }
 }
 
-function getMoviePage($number)
-{
+function getMoviePage($number) {
     return "play-movie.php?id=" . $number;
 }
 
-function getSerialPage($number)
-{
+function getSerialPage($number) {
     return "play-serial.php?id=" . $number;
 
 }

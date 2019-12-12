@@ -27,10 +27,7 @@ include 'comments.inc.php';
     <title>
         <?php
         $title = mysqli_real_escape_string($conn, $_GET['id']);
-
-
         $sql = "select * from movies where movieID = $title";
-
         $result = mysqli_query($conn, $sql);
         $queryResults = mysqli_num_rows($result);
 
@@ -57,10 +54,7 @@ include "header.php"
     <iframe
         <?php
         $title = mysqli_real_escape_string($conn, $_GET['id']);
-
-
         $sql = "select * from movies where movieID = $title";
-
         $result = mysqli_query($conn, $sql);
         $queryResults = mysqli_num_rows($result);
 
@@ -116,10 +110,7 @@ include "header.php"
     <?php
     $title = mysqli_real_escape_string($conn, $_GET['id']);
 
-
-    // show contacts
     $sql = "select * from movies where movieID = $title";
-
     $result = mysqli_query($conn, $sql);
     $queryResults = mysqli_num_rows($result);
 

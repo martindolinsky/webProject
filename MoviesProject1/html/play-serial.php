@@ -58,10 +58,7 @@ include "header.php"
     <iframe
         <?php
         $title = mysqli_real_escape_string($conn, $_GET['id']);
-
-
         $sql = "select * from tvseries where serialID = $title";
-
         $result = mysqli_query($conn, $sql);
         $queryResults = mysqli_num_rows($result);
 
@@ -124,14 +121,12 @@ include "header.php"
     $queryResults = mysqli_num_rows($result);
 
     if ($queryResults > 0) {
-        // output data of each row
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<div class='desc'><h1>" . $row["titleEN"] . " " . $row["secondTitleEN"] . " (" . $row["titleSK"] . " " . $row["secondTitleSK"] . ")" . "</h1>" .
                 "<h2>" . $row["year"] . "</h2>" .
                 "<h5>" . "Directors: " . $row["director"] . "</h5>" .
                 "<h5>" . "Stars: " . $row["actors"] . "</h5>" . "<br>" .
                 "<p style='color: lightgray'>" . $row["description"] . "</p>"
-
                 . "</div>";
         }
     } else {
@@ -170,7 +165,6 @@ include "header.php"
     $queryResult = mysqli_num_rows($result);
 
     if ($queryResult > 0) {
-
         while ($row = mysqli_fetch_assoc($result)) {
             echo '
                     <div class="row-grid">

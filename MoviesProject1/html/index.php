@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../css/index.css" />
+    <link href="../css/movies-tab.css" rel="stylesheet">
 </head>
 <body style="margin: 0;">
 <?php include 'header.php';?>
@@ -34,9 +35,7 @@
             $queryResult = mysqli_num_rows($result);
 
             if ($queryResult > 0) {
-
                 while ($row = mysqli_fetch_assoc($result)) {
-
                     echo '
                     <div class="row-grid">
                         <a href="play-movie.php?id=' . $row["movieID"] . '"><img src="' . getMovieImageSrc($row["movieID"]).'" alt="' .getMovieTitle($row["movieID"]) .'" 
@@ -63,7 +62,6 @@
             $queryResult = mysqli_num_rows($result);
 
             if ($queryResult > 0) {
-
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo '
                     <div class="row-grid">

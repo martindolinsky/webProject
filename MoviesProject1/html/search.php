@@ -23,15 +23,11 @@ include "header.php";
 
         if (isset($_POST['submit-search'])) {
             $search = mysqli_real_escape_string($conn, $_POST['search']);
-
             $sql = "SELECT * FROM movies where titleEN like '%$search%' 
                         OR secondTitleEN like '%$search%' OR secondTitleSK like '%$search%'
                 OR titleSK like '%$search%'";
-
             $result = mysqli_query($conn,$sql);
             $queryResult = mysqli_num_rows($result);
-
-
 
             if ($queryResult > 0) {
                 echo '
@@ -41,10 +37,7 @@ include "header.php";
                 
                 ';
                 while ($row = mysqli_fetch_assoc($result)) {
-
                     echo '
-        
-
                 <div class="row-grid" style="color: white;">
                     <a href="play-movie.php?id=' . $row["movieID"] . '">
                     <img src="' . getMovieImageSrc($row["movieID"]) . '" alt="' . getMovieTitle($row["movieID"]) . ' ' . getMovieSecondTitle($row["movieID"]) . '" width="120"/></a>
@@ -57,7 +50,6 @@ include "header.php";
                 </div>
                     </div>
                 ';
-
             } else {
                 echo "<div style='color: white'>";
                 echo "There are no results in movies matching your search: " . "$search";
@@ -72,25 +64,20 @@ include "header.php";
 
         if (isset($_POST['submit-search']) ) {
             $search = mysqli_real_escape_string($conn, $_POST['search']);
-
             $sql = "SELECT * FROM tvseries where titleEN like '%$search%' 
                     OR secondTitleEN like '%$search%' OR secondTitleSK like '%$search%'
             OR titleSK like '%$search%'";
-
             $result = mysqli_query($conn, $sql);
             $queryResult = mysqli_num_rows($result);
-
 
             if ($queryResult > 0) {
                 echo '
 
                 <div class="container2" style="text-align: center">
-
-    <h1 style="color: #fff;">Results in TV Series: </h1>
+    <h1 style="color: #fff; margin-top: 50px;">Results in TV Series: </h1>
     <div class="row" style="display: flex; flex-direction: row; justify-content: center">
                 ';
                 while ($row = mysqli_fetch_assoc($result)) {
-
                     echo '
             <div class="row-grid" style="color: white;">
                 <a href="play-serial.php?id=' . $row["serialID"] . '">
