@@ -90,6 +90,11 @@ include_once 'connection.php';
         <li class="pr-2">
             <a class="text-red-600" href="#">All Movies</a>
         </li>
+        <li class="pr-2">|</li>
+        <li class="pr-2">
+            <a class="text-red-600" href="#">All Movies</a>
+        </li>
+
     </ul>
 </div>
 

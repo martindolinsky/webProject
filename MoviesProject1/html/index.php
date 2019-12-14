@@ -8,7 +8,6 @@
     <meta charset="UTF-8">
     <title>Homepage</title>
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="../css/index.css" />
@@ -17,9 +16,7 @@
 <body style="margin: 0;">
 <?php include 'header.php';?>
 
-
 <main>
-
     <div class="slideshow  w3-display-container" style="margin-top: 100px">
         <a href="play-movie.php?id=2"><img class="mySlides" src="../img/movies/a_1920.jpg" style="width:100%"></a>
         <a href="play-movie.php?id=4"><img class="mySlides" src="../img/movies/aiw_1920.jpg" style="width:100%"></a>
@@ -81,7 +78,7 @@
     </div>
 
 </main>
-<?php include 'footer.php';?>
+
 
 <script>
     var slideIndex = 0;
@@ -112,3 +109,4 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 
+<?php include 'footer.php';?>

@@ -127,8 +127,7 @@ function getSerialDesc($number) {
     }
 }
 
-function getItemSrc($number)
-{
+function getItemSrc($number) {
     global $conn;
     $sql = "SELECT * FROM movies where movieid = $number;";
     $result = mysqli_query($conn, $sql);
