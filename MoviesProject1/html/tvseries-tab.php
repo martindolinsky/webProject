@@ -94,42 +94,170 @@ include_once 'connection.php';
     </ul>
 </div>
 
-<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="movies-section">
-
-    <!--    need to fix this!!!-->
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="tvseries-section-latest">
     <?php
-
-    $sql = "select * from tvseries";
+    $sql = "select * from tvseries order by serialID desc";
     $result = mysqli_query($conn, $sql);
     $queryResults = mysqli_num_rows($result);
 
     if ($queryResults > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\""
-                . getSerialPage($row['serialID']) . "\">\n"
+            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\"play-serial.php?id="
+                . $row['serialID'] . "\">\n"
                 . "        <div style=\"border-radius: 10px;\"\n"
                 . "             class=\"absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center\">\n"
                 . "            <div>\n"
                 . "                <h3 class=\"text-lg mb-2\">"
-                . getSerialTitle($row['serialID']) . "\n"
+                . $row['titleEN'] . "\n"
                 . " "
-                . getSerialSecondTitle($row['serialID']) . "</h3>\n"
+                . $row['secondTitleEN'] . "</h3>\n"
+                . "<p>" . $row['year'] . "</p>"
                 . "                <p class=\"leading-normal\">"
-                . getSerialDesc($row['serialID']) . "</p>\n"
+                . $row['description'] . "</p>\n"
                 . "            </div>\n"
                 . "        </div>\n"
                 . "        <img style=\"border-radius: 10px; height: 474.5px \" alt=\"#\" class=\"max-w-xs\" src=\""
-                . getSerialImageSrc($row['serialID']) . "\">\n"
+                . $row['srcImg'] . "\">\n"
                 . "    </a>";
-
         }
     } else {
         echo "0 results";
     }
-
-
     ?>
 
+</div>
+
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="tvseries-section-title-az">
+    <?php
+    $sql = "select * from tvseries order by titleEN asc, secondTitleEN asc";
+    $result = mysqli_query($conn, $sql);
+    $queryResults = mysqli_num_rows($result);
+
+    if ($queryResults > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\"play-serial.php?id="
+                . $row['serialID'] . "\">\n"
+                . "        <div style=\"border-radius: 10px;\"\n"
+                . "             class=\"absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center\">\n"
+                . "            <div>\n"
+                . "                <h3 class=\"text-lg mb-2\">"
+                . $row['titleEN'] . "\n"
+                . " "
+                . $row['secondTitleEN'] . "</h3>\n"
+                . "<p>" . $row['year'] . "</p>"
+                . "                <p class=\"leading-normal\">"
+                . $row['description'] . "</p>\n"
+                . "            </div>\n"
+                . "        </div>\n"
+                . "        <img style=\"border-radius: 10px; height: 474.5px \" alt=\"#\" class=\"max-w-xs\" src=\""
+                . $row['srcImg'] . "\">\n"
+                . "    </a>";
+        }
+    } else {
+        echo "0 results";
+    }
+    ?>
+
+
+
+</div>
+
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="tvseries-section-title-za">
+    <?php
+    $sql = "select * from tvseries order by titleEN desc, secondTitleEN desc";
+    $result = mysqli_query($conn, $sql);
+    $queryResults = mysqli_num_rows($result);
+
+    if ($queryResults > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\"play-serial.php?id="
+                . $row['serialID'] . "\">\n"
+                . "        <div style=\"border-radius: 10px;\"\n"
+                . "             class=\"absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center\">\n"
+                . "            <div>\n"
+                . "                <h3 class=\"text-lg mb-2\">"
+                . $row['titleEN'] . "\n"
+                . " "
+                . $row['secondTitleEN'] . "</h3>\n"
+                . "<p>" . $row['year'] . "</p>"
+                . "                <p class=\"leading-normal\">"
+                . $row['description'] . "</p>\n"
+                . "            </div>\n"
+                . "        </div>\n"
+                . "        <img style=\"border-radius: 10px; height: 474.5px \" alt=\"#\" class=\"max-w-xs\" src=\""
+                . $row['srcImg'] . "\">\n"
+                . "    </a>";
+        }
+    } else {
+        echo "0 results";
+    }
+    ?>
+
+</div>
+
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="tvseries-section-year-az">
+    <?php
+    $sql = "select * from tvseries order by year asc";
+    $result = mysqli_query($conn, $sql);
+    $queryResults = mysqli_num_rows($result);
+
+    if ($queryResults > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\"play-serial.php?id="
+                . $row['serialID'] . "\">\n"
+                . "        <div style=\"border-radius: 10px;\"\n"
+                . "             class=\"absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center\">\n"
+                . "            <div>\n"
+                . "                <h3 class=\"text-lg mb-2\">"
+                . $row['titleEN'] . "\n"
+                . " "
+                . $row['secondTitleEN'] . "</h3>\n"
+                . "<p>" . $row['year'] . "</p>"
+                . "                <p class=\"leading-normal\">"
+                . $row['description'] . "</p>\n"
+                . "            </div>\n"
+                . "        </div>\n"
+                . "        <img style=\"border-radius: 10px; height: 474.5px \" alt=\"#\" class=\"max-w-xs\" src=\""
+                . $row['srcImg'] . "\">\n"
+                . "    </a>";
+        }
+    } else {
+        echo "0 results";
+    }
+    ?>
+
+</div>
+
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="tvseries-section-year-za">
+    <?php
+    $sql = "select * from tvseries order by year desc";
+    $result = mysqli_query($conn, $sql);
+    $queryResults = mysqli_num_rows($result);
+
+    if ($queryResults > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\"play-serial.php?id="
+                . $row['serialID'] . "\">\n"
+                . "        <div style=\"border-radius: 10px;\"\n"
+                . "             class=\"absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center\">\n"
+                . "            <div>\n"
+                . "                <h3 class=\"text-lg mb-2\">"
+                . $row['titleEN'] . "\n"
+                . " "
+                . $row['secondTitleEN'] . "</h3>\n"
+                . "<p>" . $row['year'] . "</p>"
+                . "                <p class=\"leading-normal\">"
+                . $row['description'] . "</p>\n"
+                . "            </div>\n"
+                . "        </div>\n"
+                . "        <img style=\"border-radius: 10px; height: 474.5px \" alt=\"#\" class=\"max-w-xs\" src=\""
+                . $row['srcImg'] . "\">\n"
+                . "    </a>";
+        }
+    } else {
+        echo "0 results";
+    }
+    ?>
 
 </div>
 

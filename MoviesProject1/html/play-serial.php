@@ -141,16 +141,19 @@ include "header.php"
 <!-- comentSection -->
 <div class="commentS">
     <?php
+
     echo "<form method='POST' action='" . setComments($conn) . "'>
 <input type='hidden' name='userID' value='Anonymous'>
-<input type='hidden' name='date' value='" . date('Y-m-d H:i:s') . "'>
-<textarea name='message'></textarea>
+
+<input type='hidden' name='serialID' value='".$title."'>
+<input  type='hidden' name='date' value='" . date('Y-m-d H:i:s') . "'>
+<textarea required name='message'></textarea>
 <div class=buttonContainer>
 <button name='commentSubmit'>Comment</button>
 </div>
 </form>";
 
-    getComments($conn);
+    getSerialComments($conn, $title);
 
     ?>
 
@@ -168,11 +171,11 @@ include "header.php"
         while ($row = mysqli_fetch_assoc($result)) {
             echo '
                     <div class="row-grid">
-                        <a href="play-serial.php?id=' . $row["serialID"] . '"><img src="' . getSerialImageSrc($row["serialID"]).'" alt="' .getSerialTitle($row["serialID"]) .'" 
-                            ' . getSerialSecondTitle($row["serialID"]) . '"/></a>
+                        <a href="play-serial.php?id=' . $row["serialID"] . '"><img src="' . $row["srcImg"] .'" alt="' .$row["titleEN"] .'" 
+                            ' . $row["secondTitleEN"] . '"/></a>
                         <a href="play-serial.php?id='. $row["serialID"] .'">
-                                 ' . getSerialTitle($row["serialID"]) . '<br>
-                                ' . getSerialSecondTitle($row["serialID"]) .' </a>
+                                 ' . $row["titleEN"] . '<br>
+                                ' . $row["secondTitleEN"] .' </a>
                     </div>
                     ';
         }

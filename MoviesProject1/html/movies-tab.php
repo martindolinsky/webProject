@@ -85,44 +85,190 @@ include_once 'connection.php';
 
 <div class="container mx-auto my-6 lg:px-16 px-4">
     <ul class="flex items-center leading-normal text-gray-500 font-alt">
-        <li class="text-gray-300 pr-2">Latest Additions</li>
-        <li class="pr-2">|</li>
-        <li class="pr-2">
-            <a class="text-red-600" href="#">All Movies</a>
+        <li class="text-gray-300 pr-2">
+            <a href="#movies-section-latest">Latest Additions</a>
         </li>
         <li class="pr-2">|</li>
         <li class="pr-2">
-            <a class="text-red-600" href="#">All Movies</a>
+            <a class="text-red-600" href="#movies-section-title-az">Title A-Z</a>
         </li>
+        <li class="pr-2">|</li>
+        <li class="pr-2">
+            <a class="text-red-600" href="#movies-section-title-za">Title Z-A</a>
+        </li>
+        <li class="pr-2">|</li>
+        <li class="pr-2">
+            <a class="text-red-600" href="#movies-section-year-az">Year A-Z</a>
+        </li>
+        <li class="pr-2">|</li>
+        <li class="pr-2">
+            <a class="text-red-600" href="#movies-section-year-za">Year Z-A</a>
+        </li>
+
+
+
 
     </ul>
 </div>
 
-<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="movies-section">
-
-    <!--    need to fix this!!!-->
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="movies-section-latest">
     <?php
-    $sql = "select * from movies";
+    $sql = "select * from movies order by movieID desc";
     $result = mysqli_query($conn, $sql);
     $queryResults = mysqli_num_rows($result);
 
     if ($queryResults > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\""
-                . getMoviePage($row['movieID']) . "\">\n"
+            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\"play-movie.php?id="
+                . $row['movieID'] . "\">\n"
                 . "        <div style=\"border-radius: 10px;\"\n"
                 . "             class=\"absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center\">\n"
                 . "            <div>\n"
                 . "                <h3 class=\"text-lg mb-2\">"
-                . getMovieTitle($row['movieID']) . "\n"
+                . $row['titleEN'] . "\n"
                 . " "
-                . getMovieSecondTitle($row['movieID']) . "</h3>\n"
+                . $row['secondTitleEN'] . "</h3>\n"
+                . "<p>" . $row['year'] . "</p>"
                 . "                <p class=\"leading-normal\">"
-                . getMovieDesc($row['movieID']) . "</p>\n"
+                . $row['description'] . "</p>\n"
                 . "            </div>\n"
                 . "        </div>\n"
                 . "        <img style=\"border-radius: 10px; height: 474.5px \" alt=\"#\" class=\"max-w-xs\" src=\""
-                . getMovieImageSrc($row['movieID']) . "\">\n"
+                . $row['srcImg'] . "\">\n"
+                . "    </a>";
+        }
+    } else {
+        echo "0 results";
+    }
+    ?>
+
+</div>
+
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="movies-section-title-az">
+    <?php
+    $sql = "select * from movies order by titleEN asc, secondTitleEN asc";
+    $result = mysqli_query($conn, $sql);
+    $queryResults = mysqli_num_rows($result);
+
+    if ($queryResults > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\"play-movie.php?id="
+                . $row['movieID'] . "\">\n"
+                . "        <div style=\"border-radius: 10px;\"\n"
+                . "             class=\"absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center\">\n"
+                . "            <div>\n"
+                . "                <h3 class=\"text-lg mb-2\">"
+                . $row['titleEN'] . "\n"
+                . " "
+                . $row['secondTitleEN'] . "</h3>\n"
+                . "<p>" . $row['year'] . "</p>"
+                . "                <p class=\"leading-normal\">"
+                . $row['description'] . "</p>\n"
+                . "            </div>\n"
+                . "        </div>\n"
+                . "        <img style=\"border-radius: 10px; height: 474.5px \" alt=\"#\" class=\"max-w-xs\" src=\""
+                . $row['srcImg'] . "\">\n"
+                . "    </a>";
+        }
+    } else {
+        echo "0 results";
+    }
+    ?>
+
+
+
+</div>
+
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="movies-section-title-za">
+    <?php
+    $sql = "select * from movies order by titleEN desc, secondTitleEN desc";
+    $result = mysqli_query($conn, $sql);
+    $queryResults = mysqli_num_rows($result);
+
+    if ($queryResults > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\"play-movie.php?id="
+                . $row['movieID'] . "\">\n"
+                . "        <div style=\"border-radius: 10px;\"\n"
+                . "             class=\"absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center\">\n"
+                . "            <div>\n"
+                . "                <h3 class=\"text-lg mb-2\">"
+                . $row['titleEN'] . "\n"
+                . " "
+                . $row['secondTitleEN'] . "</h3>\n"
+                . "<p>" . $row['year'] . "</p>"
+                . "                <p class=\"leading-normal\">"
+                . $row['description'] . "</p>\n"
+                . "            </div>\n"
+                . "        </div>\n"
+                . "        <img style=\"border-radius: 10px; height: 474.5px \" alt=\"#\" class=\"max-w-xs\" src=\""
+                . $row['srcImg'] . "\">\n"
+                . "    </a>";
+        }
+    } else {
+        echo "0 results";
+    }
+    ?>
+
+</div>
+
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="movies-section-year-az">
+    <?php
+    $sql = "select * from movies order by year asc";
+    $result = mysqli_query($conn, $sql);
+    $queryResults = mysqli_num_rows($result);
+
+    if ($queryResults > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\"play-movie.php?id="
+                . $row['movieID'] . "\">\n"
+                . "        <div style=\"border-radius: 10px;\"\n"
+                . "             class=\"absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center\">\n"
+                . "            <div>\n"
+                . "                <h3 class=\"text-lg mb-2\">"
+                . $row['titleEN'] . "\n"
+                . " "
+                . $row['secondTitleEN'] . "</h3>\n"
+                . "<p>" . $row['year'] . "</p>"
+                . "                <p class=\"leading-normal\">"
+                . $row['description'] . "</p>\n"
+                . "            </div>\n"
+                . "        </div>\n"
+                . "        <img style=\"border-radius: 10px; height: 474.5px \" alt=\"#\" class=\"max-w-xs\" src=\""
+                . $row['srcImg'] . "\">\n"
+                . "    </a>";
+        }
+    } else {
+        echo "0 results";
+    }
+    ?>
+
+</div>
+
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="movies-section-year-za">
+    <?php
+    $sql = "select * from movies order by year desc";
+    $result = mysqli_query($conn, $sql);
+    $queryResults = mysqli_num_rows($result);
+
+    if ($queryResults > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<a class=\"relative group block mr-4 flex-shrink-0\" href=\"play-movie.php?id="
+                . $row['movieID'] . "\">\n"
+                . "        <div style=\"border-radius: 10px;\"\n"
+                . "             class=\"absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer justify-center\">\n"
+                . "            <div>\n"
+                . "                <h3 class=\"text-lg mb-2\">"
+                . $row['titleEN'] . "\n"
+                . " "
+                . $row['secondTitleEN'] . "</h3>\n"
+                . "<p>" . $row['year'] . "</p>"
+                . "                <p class=\"leading-normal\">"
+                . $row['description'] . "</p>\n"
+                . "            </div>\n"
+                . "        </div>\n"
+                . "        <img style=\"border-radius: 10px; height: 474.5px \" alt=\"#\" class=\"max-w-xs\" src=\""
+                . $row['srcImg'] . "\">\n"
                 . "    </a>";
         }
     } else {

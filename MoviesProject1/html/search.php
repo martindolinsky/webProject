@@ -40,10 +40,9 @@ include "header.php";
                     echo '
                 <div class="row-grid" style="color: white;">
                     <a href="play-movie.php?id=' . $row["movieID"] . '">
-                    <img src="' . getMovieImageSrc($row["movieID"]) . '" alt="' . getMovieTitle($row["movieID"]) . ' ' . getMovieSecondTitle($row["movieID"]) . '" width="120"/></a>
-                    <a href="play-movie.php?id=' . $row["movieID"] . '"> ' . getMovieTitle($row["movieID"]) . '<br>' . getMovieSecondTitle($row["movieID"]) . '</a>
+                    <img src="' . $row["srcImg"] . '" alt="' . $row["titleEN"] . ' ' . $row["secondTitleEN"] . '" width="120"/></a>
+                    <a href="play-movie.php?id=' . $row["movieID"] . '"> ' . $row["titleEN"] . '<br>' . $row["secondTitleEN"] . '</a>
                 </div>
-                    
     ';
                 }
                 echo '
@@ -80,10 +79,10 @@ include "header.php";
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo '
             <div class="row-grid" style="color: white;">
-                <a href="play-serial.php?id=' . $row["serialID"] . '">
-                <img src="' . getSerialImageSrc($row["serialID"]) . '" alt="' . getSerialTitle($row["serialID"]) . ' ' . getSerialSecondTitle($row["serialID"]) . '" width="120"/></a>
-                <a href="play-serial.php?id=' . $row["serialID"] . '"> ' . getSerialTitle($row["serialID"]) . '<br>' . getSerialSecondTitle($row["serialID"]) . '</a>
-            </div>
+                    <a href="play-serial.php?id=' . $row["serialID"] . '">
+                    <img src="' . $row["srcImg"] . '" alt="' . $row["titleEN"] . ' ' . $row["secondTitleEN"] . '" width="120"/></a>
+                    <a href="play-serial.php?id=' . $row["serialID"] . '"> ' . $row["titleEN"] . '<br>' . $row["secondTitleEN"] . '</a>
+                </div>
 ';
                 }
                 echo '
@@ -91,7 +90,7 @@ include "header.php";
                 ';
 
             } else {
-                echo "<div style='color: white'>";
+                echo "<div style='color: white; margin-top:10px;'>";
                 echo "There are no results in TV Series matching your search: " . "$search";
                 echo "</div>";
             }

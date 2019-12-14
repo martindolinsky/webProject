@@ -35,11 +35,11 @@
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo '
                     <div class="row-grid">
-                        <a href="play-movie.php?id=' . $row["movieID"] . '"><img src="' . getMovieImageSrc($row["movieID"]).'" alt="' .getMovieTitle($row["movieID"]) .'" 
-                            ' . getMovieSecondTitle($row["movieID"]) . '"/></a>
+                        <a href="play-movie.php?id=' . $row["movieID"] . '"><img src="' . $row["srcImg"].'" alt="' .$row["titleEN"] .'" 
+                            ' . $row["secondTitleEN"] . '"/></a>
                         <a href="play-movie.php?id='. $row["movieID"] .'">
-                                 ' . getMovieTitle($row["movieID"]) . '<br>
-                                ' . getMovieSecondTitle($row["movieID"]) .' </a>
+                                 ' . $row["titleEN"] . '<br>
+                                ' . $row["secondTitleEN"] .' </a>
                     </div>
                     ';
                 }
@@ -62,11 +62,11 @@
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo '
                     <div class="row-grid">
-                        <a href="play-serial.php?id=' . $row["serialID"] . '"><img src="' . getSerialImageSrc($row["serialID"]).'" alt="' .getSerialTitle($row["serialID"]) .'" 
-                            ' . getSerialSecondTitle($row["serialID"]) . '"/></a>
+                        <a href="play-serial.php?id=' . $row["serialID"] . '"><img src="' . $row["srcImg"].'" alt="' .$row["titleEN"] .'" 
+                            ' . $row["secondTitleEN"] . '"/></a>
                         <a href="play-serial.php?id='. $row["serialID"] .'">
-                                 ' . getSerialTitle($row["serialID"]) . '<br>
-                                ' . getSerialSecondTitle($row["serialID"]) .' </a>
+                                 ' . $row["titleEN"] . '<br>
+                                ' . $row["secondTitleEN"] .' </a>
                     </div>
                     ';
                 }

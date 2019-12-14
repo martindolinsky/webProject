@@ -11,8 +11,6 @@ include 'comments.inc.php';
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <link rel="stylesheet" type="text/css" href="../css/item-style.css" ?timestamp=<?php echo time() ?>>
     <link rel="stylesheet" href="../css/index.css">
-
-
     <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -134,25 +132,21 @@ include "header.php"
 
 </div>
 
-
 <!-- comentSection -->
 <div class="commentS">
     <?php
     echo "<form method='POST' action='" . setComments($conn) . "'>
 <input type='hidden' name='userID' value='Anonymous'>
-<input type='hidden' name='date' value='" . date('Y-m-d H:i:s') . "'>
-<textarea name='message'></textarea>
+<input type='hidden' name='movieID' value='".$title."'>
+<input  type='hidden' name='date' value='" . date('Y-m-d H:i:s') . "'>
+<textarea required name='message'></textarea>
 <div class=buttonContainer>
 <button name='commentSubmit'>Comment</button>
 </div>
 </form>";
-
-    getComments($conn);
-
+    getMovieComments($conn, $title);
     ?>
-
 </div>
-
 
 <!-- obsah -->
 <div class="content">
@@ -167,11 +161,11 @@ include "header.php"
 
             echo '
                     <div class="row-grid">
-                        <a href="play-movie.php?id=' . $row["movieID"] . '"><img src="' . getMovieImageSrc($row["movieID"]).'" alt="' .getMovieTitle($row["movieID"]) .'" 
-                            ' . getMovieSecondTitle($row["movieID"]) . '"/></a>
+                        <a href="play-movie.php?id=' . $row["movieID"] . '"><img src="' . $row["srcImg"] .'" alt="' .$row["titleEN"] .'" 
+                            ' . $row["secondTitleEN"] . '"/></a>
                         <a href="play-movie.php?id='. $row["movieID"] .'">
-                                 ' . getMovieTitle($row["movieID"]) . '<br>
-                                ' . getMovieSecondTitle($row["movieID"]) .' </a>
+                                 ' . $row["titleEN"] . '<br>
+                                ' . $row["secondTitleEN"] .' </a>
                     </div>
                     ';
         }
