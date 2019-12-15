@@ -86,10 +86,24 @@ include_once 'connection.php';
 
 <div class="container mx-auto my-6 lg:px-16 px-4">
     <ul class="flex items-center leading-normal text-gray-500 font-alt">
-        <li class="text-gray-300 pr-2">Latest Additions</li>
+        <li class="text-gray-300 pr-2">
+            <a href="#movies-section-latest">Latest Additions</a>
+        </li>
         <li class="pr-2">|</li>
         <li class="pr-2">
-            <a class="text-red-600" href="#">All Movies</a>
+            <a class="text-red-600" href="#tvseries-section-title-az">Title A-Z</a>
+        </li>
+        <li class="pr-2">|</li>
+        <li class="pr-2">
+            <a class="text-red-600" href="#tvseries-section-title-za">Title Z-A</a>
+        </li>
+        <li class="pr-2">|</li>
+        <li class="pr-2">
+            <a class="text-red-600" href="#tvseries-section-year-az">Year A-Z</a>
+        </li>
+        <li class="pr-2">|</li>
+        <li class="pr-2">
+            <a class="text-red-600" href="#tvseries-section-year-za">Year Z-A</a>
         </li>
     </ul>
 </div>

@@ -67,8 +67,6 @@ include "header.php"
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "src=" . $row['src'];
             }
-        } else {
-            echo "0 results";
         }
         ?>
             frameborder="0"
@@ -82,19 +80,28 @@ include "header.php"
 
     <!-- imdb -->
     <div class="imdb" style="padding: 20px;">
-        <span
-                class="imdbRatingPlugin"
-                data-user="ur110064039"
-                data-title="tt7286456"
-                data-style="p3"
-                style="color: white"
-        ><a href="https://www.imdb.com/title/tt7286456/?ref_=plg_rt_1"
-            ><img
-                        src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png"
-                        alt=" Joker
-						(2019) on IMDb"
-                /> </a></span
-        >
+        <?php
+
+        $title = mysqli_real_escape_string($conn, $_GET['id']);
+
+        $sql = "select * from tvseries where serialID = $title";
+        $result = mysqli_query($conn, $sql);
+        $queryResults = mysqli_num_rows($result);
+
+        if ($queryResults > 0) {
+            // output data of each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<span class=\"imdbRatingPlugin\"
+                data-user=\"ur110064039\"
+                data-title=\"". $row["data-title"] ."\"
+                data-style=\"p3\"
+                style=\"color: white\"><a href=\"https://www.imdb.com/title/". $row["data-title"] ."/?ref_=plg_rt_1\"><img
+                        src=\"https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_37x18.png\"
+                        alt=\" ". $row["titleEN"] . " " . $row["secondTitleEN"] . "
+						(" . $row["year"] . ") on IMDb\"/> </a></span>";
+            }
+        }
+        ?>
         <script>
             (function (d, s, id) {
                 var js,
@@ -147,7 +154,7 @@ include "header.php"
 
 <input type='hidden' name='serialID' value='".$title."'>
 <input  type='hidden' name='date' value='" . date('Y-m-d H:i:s') . "'>
-<textarea required name='message'></textarea>
+<textarea required name='message' style='border-radius: 10px; padding: 5px;'></textarea>
 <div class=buttonContainer>
 <button name='commentSubmit'>Comment</button>
 </div>
@@ -163,7 +170,8 @@ include "header.php"
 <!-- obsah -->
 <div class="content">
     <?php
-    $sql = "SELECT * FROM tvseries order by year desc limit 3";
+    $title = mysqli_real_escape_string($conn, $_GET['id']);
+    $sql = "SELECT * FROM tvseries where genre like (select genre from tvseries where serialID = $title) and serialID != $title";
     $result = mysqli_query($conn,$sql);
     $queryResult = mysqli_num_rows($result);
 

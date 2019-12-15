@@ -104,10 +104,6 @@ include_once 'connection.php';
         <li class="pr-2">
             <a class="text-red-600" href="#movies-section-year-za">Year Z-A</a>
         </li>
-
-
-
-
     </ul>
 </div>
 

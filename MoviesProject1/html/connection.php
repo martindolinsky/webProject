@@ -9,6 +9,3 @@ $conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
 if ($conn -> error) {
     die("could not connect successfully");
 }
-
-
-
