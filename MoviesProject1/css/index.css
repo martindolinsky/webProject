@@ -11,6 +11,56 @@ main {
     min-height: 100vh;
 }
 
+nav {
+    padding: 0.5rem 0.75rem;
+    z-index: 10;
+}
+#main-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+#sub-container {
+    flex: 1 1 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#burger {
+    display: block;
+    padding-right: 0.25rem;
+}
+#burger > svg {
+    fill: currentColor;
+    color: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+#main-container > li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+#burger-menu {
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+
+}
+#search-input {
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+}
+#search-button {
+    padding: 0.25rem 1rem;
+    background-color: #f6ad55;
+    border-radius: 0.5rem;
+}
+
 .navbar-dark {
     background-color: #222422;
 }

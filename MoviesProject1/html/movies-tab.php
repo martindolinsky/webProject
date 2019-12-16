@@ -83,31 +83,31 @@ include_once 'connection.php';
     </div>
 </header>
 
-<div class="container mx-auto my-6 lg:px-16 px-4">
+<div class="container mx-auto my-6 lg:px-16 px-4" id="movies-section">
     <ul class="flex items-center leading-normal text-gray-500 font-alt">
-        <li class="text-gray-300 pr-2">
-            <a href="#movies-section-latest">Latest Additions</a>
+        <li class="text-red-600 pr-2">
+            <button class="color" id="a-section-latest" onclick="showOrHide1()" style="color: red;">Latest Additions</button>
         </li>
         <li class="pr-2">|</li>
         <li class="pr-2">
-            <a class="text-red-600" href="#movies-section-title-az">Title A-Z</a>
+            <button class="color" id="a-section-title-az" onclick="showOrHide2()" style="color: white;">Title A-Z</button>
         </li>
         <li class="pr-2">|</li>
         <li class="pr-2">
-            <a class="text-red-600" href="#movies-section-title-za">Title Z-A</a>
+            <button class="color" id="a-section-title-za" onclick="showOrHide3()" style="color: white;">Title Z-A</button>
         </li>
         <li class="pr-2">|</li>
         <li class="pr-2">
-            <a class="text-red-600" href="#movies-section-year-az">Year A-Z</a>
+            <button class="color" id="a-section-year-az" onclick="showOrHide4()" style="color: white;">Year A-Z</button>
         </li>
         <li class="pr-2">|</li>
         <li class="pr-2">
-            <a class="text-red-600" href="#movies-section-year-za">Year Z-A</a>
+            <button class="color" id="a-section-year-za" onclick="showOrHide5()" style="color: white;">Year Z-A</button>
         </li>
     </ul>
 </div>
 
-<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="movies-section-latest">
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="section-latest" style="display: flex;">
     <?php
     $sql = "select * from movies order by movieID desc";
     $result = mysqli_query($conn, $sql);
@@ -140,7 +140,7 @@ include_once 'connection.php';
 
 </div>
 
-<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="movies-section-title-az">
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="section-title-az" style="display: none;">
     <?php
     $sql = "select * from movies order by titleEN asc, secondTitleEN asc";
     $result = mysqli_query($conn, $sql);
@@ -175,7 +175,7 @@ include_once 'connection.php';
 
 </div>
 
-<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="movies-section-title-za">
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="section-title-za" style="display: none;">
     <?php
     $sql = "select * from movies order by titleEN desc, secondTitleEN desc";
     $result = mysqli_query($conn, $sql);
@@ -208,7 +208,7 @@ include_once 'connection.php';
 
 </div>
 
-<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="movies-section-year-az">
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="section-year-az" style="display: none;">
     <?php
     $sql = "select * from movies order by year asc";
     $result = mysqli_query($conn, $sql);
@@ -241,7 +241,7 @@ include_once 'connection.php';
 
 </div>
 
-<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="movies-section-year-za">
+<div class="flex items-stretch justify-start mb-10 px-4 overflow-auto relative" id="section-year-za" style="display: none;">
     <?php
     $sql = "select * from movies order by year desc";
     $result = mysqli_query($conn, $sql);
