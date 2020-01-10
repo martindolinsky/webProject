@@ -12,7 +12,7 @@ include_once 'connection.php';
 <body style="margin: 0; min-height: 100vh">
 <?php include 'header.php';?>
 
-<div class="container1" style="background-color: #363836;color: #fff; height: 700px;margin: 100px 20%;">
+<div class="container1" style="background-color: #363836;color: #fff;margin: 100px 20%;">
     <form class="contact-form" action="contactform.php" method="post" style="display: flex; flex-direction: column;align-items: center">
         <h3 style="padding-top: 20px;">First name:</h3>
         <input style="width: 50%; margin: 10px; padding: 5px; border-radius: 10px; border: 2px solid black; font-size: 1.5em"

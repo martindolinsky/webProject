@@ -167,7 +167,6 @@ include "header.php"
 </div>
 
 
-<!-- obsah -->
 <div class="content">
     <?php
     $title = mysqli_real_escape_string($conn, $_GET['id']);

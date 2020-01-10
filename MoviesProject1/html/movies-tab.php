@@ -19,11 +19,12 @@ include_once 'connection.php';
     ::-webkit-scrollbar {
         display: none;
     }
+
 </style>
 <body class="antialiased bg-fixed" style="background-image: url('../img/bg-img.jpg');">
 <header class="header relative lg:overflow-hidden">
     <div class="absolute inset-0 z-negative lg:opacity-100">
-        <video autoplay class="object-cover w-full h-full" loop muted src="../img/video.mp4"></video>
+        <video autoplay class="object-cover w-full h-full" loop muted src="../img/movie_bg.mp4"></video>
     </div>
 
     <nav class="md:p-3 py-2 px-3 z-10">

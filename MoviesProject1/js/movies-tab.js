@@ -7,46 +7,6 @@ menuTarget.addEventListener('click', event => {
     menu.classList.toggle('hidden')
 });
 
-// const showOrHide = function () {
-//
-//     const first = document.getElementById("movies-section-latest");
-//     const second = document.getElementById("movies-section-title-az");
-//     const third = document.getElementById("movies-section-title-za");
-//     const fourth = document.getElementById("movies-section-year-az");
-//     const fifth = document.getElementById("movies-section-year-za");
-//     const array = [first,second,third,fourth,fifth];
-//
-//     // switch (array) {
-//     //     case first.style.display === "flex": second.style.display = "none";
-//     //     third.style.display = "none";fourth.style.display = "none";fifth.style.display = "none"; break;
-//     //     case second.style.display === "flex": first.style.display = "none";
-//     //         third.style.display = "none";fourth.style.display = "none";fifth.style.display = "none"; break;
-//     //     case third.style.display === "flex": first.style.display = "none";
-//     //         second.style.display = "none";fourth.style.display = "none";fifth.style.display = "none"; break;
-//     //     case fourth.style.display === "flex": first.style.display = "none";
-//     //         third.style.display = "none";second.style.display = "none";fifth.style.display = "none"; break;
-//     //     case fifth.style.display === "flex": first.style.display = "none";
-//     //         third.style.display = "none";fourth.style.display = "none";second.style.display = "none"; break;
-//     //
-//     // }
-//
-//     if (first.style.display === "none") {
-//         first.style.display = "flex";
-//     }
-//     if (second.style.display === "none") {
-//         second.style.display = "flex";
-//     }
-//     if (third.style.display === "none") {
-//         third.style.display = "flex";
-//     }
-//     if (fourth.style.display === "none") {
-//         fourth.style.display = "flex";
-//     }
-//     if (fifth.style.display === "none") {
-//         fifth.style.display = "flex";
-//     }
-// };
-
 const first = document.getElementById("section-latest");
 const second = document.getElementById("section-title-az");
 const third = document.getElementById("section-title-za");
@@ -76,8 +36,6 @@ function showOrHide1() {
         fourth.style.display = "none";
         fifth.style.display = "none";
     }
-
-
 }
 
 function showOrHide2() {
@@ -95,8 +53,6 @@ function showOrHide2() {
         fourth.style.display = "none";
         fifth.style.display = "none";
     }
-
-
 }
 
 function showOrHide3() {
@@ -115,8 +71,6 @@ function showOrHide3() {
         fourth.style.display = "none";
         fifth.style.display = "none";
     }
-
-
 }
 
 function showOrHide4() {
@@ -135,8 +89,6 @@ function showOrHide4() {
         first.style.display = "none";
         fifth.style.display = "none";
     }
-
-
 }
 
 function showOrHide5() {
@@ -154,8 +106,6 @@ function showOrHide5() {
         fourth.style.display = "none";
         first.style.display = "none";
     }
-
-
 }
 
 
