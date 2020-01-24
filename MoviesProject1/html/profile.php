@@ -14,23 +14,25 @@ include_once 'connection.php';
 
 <main>
     <div class="container1" style="background-color: #363836;color: #fff;margin: 100px 20%;">
-
-        <h1 style="text-align: center">Profile</h1>
+        <h1 style="text-align: center;padding-top: 20px">Profile</h1>
 
         <?php
+        $test = $_SESSION['userId'];
+
         $title = mysqli_real_escape_string($conn, $_GET['id']);
 
-        $sql = "select * from Users";
+        $sql = "select * from Users WHERE UsersID = $test";
         $result = mysqli_query($conn, $sql);
         $queryResults = mysqli_num_rows($result);
 
         if ($queryResults > 0) {
             // output data of each row
             while ($row = mysqli_fetch_assoc($result)) {
-                echo
-                    "<h2>Name: " . $row["uidUsers"] . "</h2>" .
-                    "<h5>E-Mail: " . $row["emailUsers"] . "</h5>"
-                ;
+
+                    echo
+                        "<div style='margin: 20px'>" .
+                        "<p style='margin-bottom: 20px; font-size: 1em'>Name: " . $row["uidUsers"] . "</p>" .
+                        "<p style='padding-bottom: 20px'>E-Mail: " . $row["emailUsers"] . "</p></div>";
             }
         } else {
             echo "0 results";

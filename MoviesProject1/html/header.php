@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <a class="navbar-brand" href="index.php">LOGO</a>
@@ -25,7 +28,7 @@
                     </li>
 
                         <?php
-                        if (isset($_SESSION['userId'])) {
+                        if (!empty($_SESSION['userId'])) {
                             echo '
                             <li class="nav-item">
                             <a class="nav-link" href="profile.php">Profile</a>
@@ -58,10 +61,6 @@
                     </button>
                 </form>
             </div>
-
-
-
-
         </div>
     </nav>
 </header>

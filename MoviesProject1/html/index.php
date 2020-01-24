@@ -16,6 +16,7 @@
 <body style="margin: 0;">
 <?php include 'header.php';?>
 
+
 <main>
     <div class="slideshow  w3-display-container" style="margin-top: 100px">
         <a href="play-movie.php?id=2"><img class="mySlides" src="../img/movies/a_1920.jpg" style="width:100%"></a>
