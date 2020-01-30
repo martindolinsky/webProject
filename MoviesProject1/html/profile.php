@@ -17,11 +17,11 @@ include_once 'connection.php';
         <h1 style="text-align: center;padding-top: 20px">Profile</h1>
 
         <?php
-        $test = $_SESSION['userId'];
+        $user = $_SESSION['userId'];
 
         $title = mysqli_real_escape_string($conn, $_GET['id']);
 
-        $sql = "select * from Users WHERE UsersID = $test";
+        $sql = "select * from Users WHERE UsersID = $user";
         $result = mysqli_query($conn, $sql);
         $queryResults = mysqli_num_rows($result);
 
@@ -30,9 +30,11 @@ include_once 'connection.php';
             while ($row = mysqli_fetch_assoc($result)) {
 
                     echo
-                        "<div style='margin: 20px'>" .
+                        "<div style='margin: 20px;display: flex;flex-direction: row; flex-wrap: wrap;justify-content: center'>" .
+                        "<div><img src='../img/profile_picture.png' style='width: 200px; padding-bottom: 20px'></div>" .
+                        "<div style='padding: 20px;'>" .
                         "<p style='margin-bottom: 20px; font-size: 1em'>Name: " . $row["uidUsers"] . "</p>" .
-                        "<p style='padding-bottom: 20px'>E-Mail: " . $row["emailUsers"] . "</p></div>";
+                        "<p style='padding-bottom: 20px'>E-Mail: " . $row["emailUsers"] . "</p></div></div>";
             }
         } else {
             echo "0 results";

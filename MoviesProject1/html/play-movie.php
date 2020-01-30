@@ -142,8 +142,28 @@ include "header.php"
 <!-- comentSection -->
 <div class="commentS">
     <?php
+    $userId = isset($_SESSION['userId']);
+    if($userId!=NULL){
+        $userId = $_SESSION['userId'];
+        $sql = "select uidUsers from Users WHERE UsersID = $userId";
+        $result = mysqli_query($conn, $sql);
+        // $row1 = mysqli_fetch_assoc($result3);
+        // $result3 = serialize($result3);
+        while($row = $result->fetch_assoc())
+        {
+            $userName = $row["uidUsers"];
+        }
+    }else{
+        $userName = 'Anonymous';
+    }
+
+
+
     echo "<form method='POST' action='" . setComments($conn) . "'>
-<input type='hidden' name='userID' value='Anonymous'>
+    
+    <input type='hidden' name='userID' value='".$userName."'>
+  
+
 <input type='hidden' name='movieID' value='".$title."'>
 <input  type='hidden' name='date' value='" . date('Y-m-d H:i:s') . "'>
 <textarea required name='message' style='border-radius: 10px; padding: 5px;'></textarea>

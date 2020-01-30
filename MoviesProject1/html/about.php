@@ -37,6 +37,19 @@ include "header.php";
         </div>
     </div>
 
+    <div class="container1" style="background-color: #363836;color: #fff;margin: 100px 20%; text-align: center">
+        <h3 style="padding-top: 20px;">Martin Dolinsky</h3>
+        <p style="padding: 10px">Student of academy SOVY ready to face all challenges ahed. Willing to learn new technologies.
+        Want to become real backend developer but also willing to be full stack Java Android developer.</p>
+        <h3 style="padding-top: 20px;">Jakub Kutka</h3>
+        <p style="padding: 10px">Enthusiastic student, willing to learn new things and contribute to the team as much as I can.
+            My main focus is to become a full stack developer because of wide variety of possibilities it offers.</p>
+        <h3 style="padding-top: 20px;">Damian Matysko</h3>
+        <p style="padding: 10px">Student of IT Academy SOVY.
+            I am interested in software development and I focus on backend programming.</p>
+
+    </div>
+
 </main>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

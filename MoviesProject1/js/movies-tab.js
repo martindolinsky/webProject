@@ -57,7 +57,6 @@ function showOrHide2() {
 
 function showOrHide3() {
 
-
     if (third.style.display === "none") {
         third.style.display = "flex";
         firstBut.style.color = "white";
@@ -74,7 +73,6 @@ function showOrHide3() {
 }
 
 function showOrHide4() {
-
 
     if (fourth.style.display === "none") {
         fourth.style.display = "flex";
@@ -108,12 +106,8 @@ function showOrHide5() {
     }
 }
 
-
 first.addEventListener("click",showOrHide1);
 second.addEventListener("click",showOrHide2);
 third.addEventListener("click",showOrHide3);
 fourth.addEventListener("click",showOrHide4);
 fifth.addEventListener("click",showOrHide5);
-
-
-

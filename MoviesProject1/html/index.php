@@ -37,12 +37,13 @@
                     echo '
                     <div class="row-grid">
                         <a href="play-movie.php?id=' . $row["movieID"] . '"><img src="' . $row["srcImg"].'" alt="' .$row["titleEN"] .'" 
-                            ' . $row["secondTitleEN"] . '"/></a>
+                            ' . $row["secondTitleEN"] . '"/>
+                        </a>
                         <a href="play-movie.php?id='. $row["movieID"] .'">
                                  ' . $row["titleEN"] . '<br>
-                                ' . $row["secondTitleEN"] .' </a>
-                    </div>
-                    ';
+                                ' . $row["secondTitleEN"] .' 
+                        </a>
+                    </div>';
                 }
             }
             ?>
@@ -82,12 +83,12 @@
 
 
 <script>
-    var slideIndex = 0;
+    let slideIndex = 0;
     showDivs();
 
     function showDivs() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }

@@ -73,18 +73,44 @@ include_once 'connection.php';
     <div class="container mx-auto lg:mt-56 lg:px-16 px-4 py-4">
         <div class="md:pl-8 md:border-l border-white">
             <p class="text-white tracking-wide text-base font-light leading-none">Out now</p>
-            <h1 class="text-white md:text-6xl text-2xl font-bold font-sans m-0 md:leading-none">Sample Text</h1>
-            <p class="text-white text-lg md:max-w-lg w-full md:my-4">Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Quo laboriosam quae mollitia voluptatibus placeat. Libero adipisci ipsam, nobis, corrupti nesciunt
-                id beatae laudantium quis dolorum aliquam impedit quae recusandae ad.</p>
+            <h1 class="text-white md:text-6xl text-2xl font-bold font-sans m-0 md:leading-none">
+                <?php
+                $sql = "select * from tvseries WHERE serialID = 38";
+                $result = mysqli_query($conn, $sql);
+                $queryResults = mysqli_num_rows($result);
+
+                if ($queryResults > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo $row['titleEN'] . " " . $row['secondTitleEN'];
+                    }
+                } else {
+                    echo "0 results";
+                }
+                ?>
+            </h1>
+            <p class="text-white text-lg md:max-w-lg w-full md:my-4">
+                <?php
+                $sql = "select * from tvseries WHERE serialID = 38";
+                $result = mysqli_query($conn, $sql);
+                $queryResults = mysqli_num_rows($result);
+
+                if ($queryResults > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo $row['description'];
+                    }
+                } else {
+                    echo "0 results";
+                }
+                ?>
+            </p>
             <a class="px-5 py-3 inline-block my-2 bg-orange-500 hover:bg-transparent hover:text-white transition-500 rounded-lg"
-               href="#movies-section">Movies</a>
+               href="#tvseries-section">TV Series</a>
         </div>
     </div>
 </header>
 
 
-<div class="container mx-auto my-6 lg:px-16 px-4">
+<div class="container mx-auto my-6 lg:px-16 px-4" id="tvseries-section">
     <ul class="flex items-center leading-normal text-gray-500 font-alt">
         <li class="text-red-600 pr-2">
             <button class="color" id="a-section-latest" onclick="showOrHide1()" style="color: red;">Latest Additions</button>
@@ -275,14 +301,6 @@ include_once 'connection.php';
 
 </div>
 
-<div class="container mx-auto py-8 font-alt text-white text-center md:px-0 px-4">
-    <h2 class="md:text-5xl text-2xl font-sans font-bold mb-4">About Us</h2>
-    <p class="opacity-75 max-w-md mx-auto font-alt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-        temporibus error ducimus necessitatibus eius excepturi nemo exercitationem distinctio minus ipsum! Delectus
-        beatae ducimus eos repellendus. Sit consectetur ad expedita provident.</p>
-
-    <a class="text-brand my-2 inline-block" href="#">More info +</a>
-</div>
 
 <footer class="container mx-auto text-white py-6 md:px-16 px-4">
     <div class="md:pl-3 md:border-l border-white mb-6">
@@ -300,7 +318,7 @@ include_once 'connection.php';
     </div>
 
     <div class="flex items-center justify-start flex-wrap">
-        <p class="opacity-75 text-sm md:mb-0 mb-3">&copy; 2023 By Jakub Kutka, Martin Dolinsky and Damian Matysko.
+        <p class="opacity-75 text-sm md:mb-0 mb-3">&copy; 2019 By Jakub Kutka, Martin Dolinsky and Damian Matysko.
             Template used from Wix.com.</p>
 
         <div class="md:ml-4 flex items-center justify-start">
