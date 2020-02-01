@@ -25,7 +25,7 @@ include "header.php";
             $search = mysqli_real_escape_string($conn, $_POST['search']);
             $sql = "SELECT * FROM movies where titleEN like '%$search%' 
                         OR secondTitleEN like '%$search%' OR secondTitleSK like '%$search%'
-                OR titleSK like '%$search%'";
+                OR titleSK like '%$search%' or year like '%$search%'";
             $result = mysqli_query($conn,$sql);
             $queryResult = mysqli_num_rows($result);
 
@@ -65,7 +65,7 @@ include "header.php";
             $search = mysqli_real_escape_string($conn, $_POST['search']);
             $sql = "SELECT * FROM tvseries where titleEN like '%$search%' 
                     OR secondTitleEN like '%$search%' OR secondTitleSK like '%$search%'
-            OR titleSK like '%$search%'";
+            OR titleSK like '%$search%' or year like '%$search%'";
             $result = mysqli_query($conn, $sql);
             $queryResult = mysqli_num_rows($result);
 

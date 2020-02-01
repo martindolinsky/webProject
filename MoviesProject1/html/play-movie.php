@@ -153,24 +153,20 @@ include "header.php"
         {
             $userName = $row["uidUsers"];
         }
-    }else{
-        $userName = 'Anonymous';
     }
 
 
-
-    echo "<form method='POST' action='" . setComments($conn) . "'>
-    
-    <input type='hidden' name='userID' value='".$userName."'>
-  
-
-<input type='hidden' name='movieID' value='".$title."'>
-<input  type='hidden' name='date' value='" . date('Y-m-d H:i:s') . "'>
-<textarea required name='message' style='border-radius: 10px; padding: 5px;'></textarea>
-<div class=buttonContainer>
-<button name='commentSubmit'>Comment</button>
-</div>
-</form>";
+    if (!empty($_SESSION['userId'])) {
+        echo "<form method='POST' action='" . setComments($conn) . "'>
+        <input type='hidden' name='userID' value='".$userName."'>
+        <input type='hidden' name='movieID' value='".$title."'>
+        <input  type='hidden' name='date' value='" . date('Y-m-d H:i:s') . "'>
+        <textarea required name='message' style='border-radius: 10px; padding: 5px;'></textarea>
+        <div class='buttonContainer'>
+        <button name='commentSubmit' class='btn btn-outline-danger' style='border-radius: 8px;'>Comment</button>
+        </div>
+        </form>";
+    }
     getMovieComments($conn, $title);
     ?>
 </div>

@@ -27,7 +27,7 @@ include_once 'connection.php';
         <textarea
                 style="width: 80%; margin: 10px; padding: 5px;border-radius: 10px; border: 2px solid black; font-size: 1.5em"
                 name="message" placeholder="Message..." id="message" cols="50" rows="5"></textarea>
-        <button type="submit" name="submit" class="btn btn-outline-primary" style="margin: 10px">Submit</button>
+        <button type="submit" name="submit" class="btn btn-outline-danger" style="margin: 10px">Submit</button>
     </form>
 </div>
 

@@ -41,8 +41,8 @@ session_start();
                         }
                         else {
                             echo '
-                    <a class="nav-link" href="login.php"><button class="btn btn-outline-primary my-2 my-sm-0" type="submit" name="login-page">Log in</button></a>
-                    <li class="nav-item"><a href="signup.php" class="nav-link header-signup" style="text-align: center"><button class="btn btn-outline-primary my-2 my-sm-0" type="submit" name="signup-page">Sign up</button></a></li>
+                    <a class="nav-link" href="login.php"><button class="btn btn-outline-danger my-2 my-sm-0" type="submit" name="login-page">Log in</button></a>
+                    <li class="nav-item"><a href="signup.php" class="nav-link header-signup" style="text-align: center"><button class="btn btn-outline-danger my-2 my-sm-0" type="submit" name="signup-page">Sign up</button></a></li>
                     
             
                 ';
@@ -56,7 +56,7 @@ session_start();
                 <form class="form-inline my-2 my-lg-0" action="search.php" method="POST">
                     <input class="form-control mr-sm-2" name="search" type="text" placeholder="Search..."
                            aria-label="Search">
-                    <button class="btn btn-outline-primary my-2 my-sm-0" name="submit-search" id="submit" type="submit">
+                    <button class="btn btn-outline-danger my-2 my-sm-0" name="submit-search" id="submit" type="submit">
                         Search
                     </button>
                 </form>
