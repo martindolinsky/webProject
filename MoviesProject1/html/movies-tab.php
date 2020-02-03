@@ -28,7 +28,7 @@ session_start()
         <video autoplay class="object-cover w-full h-full" loop muted src="../img/movie_bg.mp4"></video>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <a class="navbar-brand" href="index.php">LOGO</a>
+        <a class="navbar-brand" href="index.php" style="color: rgb(204,68,75);">MovieTrailers</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

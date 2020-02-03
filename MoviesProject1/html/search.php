@@ -44,10 +44,6 @@ include "header.php";
                 </div>
                     </div>
                 ';
-            } else {
-                echo "<div style='color: white'>";
-                echo "There are no results in movies matching your search: " . "$search";
-                echo "</div>";
             }
         }
         ?>
@@ -76,10 +72,6 @@ include "header.php";
 ';
                 }
                 echo '</div>';
-            } else {
-                echo "<div style='color: white; margin-top:10px;'>";
-                echo "There are no results in TV Series matching your search: " . "$search";
-                echo "</div>";
             }
         }
         ?>
