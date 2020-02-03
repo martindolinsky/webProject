@@ -32,7 +32,7 @@ include_once 'connection.php';
     </div>
     <div class="container1" style="background-color: #363836;color: #fff;margin: 100px 20%; text-align: center">
         <h3 style="padding-top: 20px;">Martin Dolinsky</h3>
-        <p style="padding: 10px">Student of academy SOVY ready to face all challenges ahed. Willing to learn new technologies.
+        <p style="padding: 10px">Student of academy SOVY ready to face all challenges ahead. Willing to learn new technologies.
         Want to become real backend developer but also willing to be full stack Java Android developer.</p>
         <h3 style="padding-top: 20px;">Jakub Kutka</h3>
         <p style="padding: 10px">Enthusiastic student, willing to learn new things and contribute to the team as much as I can.
