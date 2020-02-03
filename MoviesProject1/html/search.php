@@ -1,7 +1,6 @@
 <?php
 include_once 'connection.php';
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,9 +17,7 @@ include "header.php";
 
 ?>
 <main class="main-container" style="display: flex; flex-direction: column; margin: 100px 5%">
-
         <?php
-
         if (isset($_POST['submit-search'])) {
             $search = mysqli_real_escape_string($conn, $_POST['search']);
             $sql = "SELECT * FROM movies where titleEN like '%$search%' 
@@ -28,13 +25,11 @@ include "header.php";
                 OR titleSK like '%$search%' or year like '%$search%'";
             $result = mysqli_query($conn,$sql);
             $queryResult = mysqli_num_rows($result);
-
             if ($queryResult > 0) {
                 echo '
                 <div class="container2" style="text-align: center">
             <h1 style="color: #fff;">Results in Movies : </h1>
             <div class="row" style="display: flex; flex-direction: row; justify-content: center">
-                
                 ';
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo '
@@ -56,11 +51,7 @@ include "header.php";
             }
         }
         ?>
-
-
-
         <?php
-
         if (isset($_POST['submit-search']) ) {
             $search = mysqli_real_escape_string($conn, $_POST['search']);
             $sql = "SELECT * FROM tvseries where titleEN like '%$search%' 
@@ -68,7 +59,6 @@ include "header.php";
             OR titleSK like '%$search%' or year like '%$search%'";
             $result = mysqli_query($conn, $sql);
             $queryResult = mysqli_num_rows($result);
-
             if ($queryResult > 0) {
                 echo '
 
@@ -85,10 +75,7 @@ include "header.php";
                 </div>
 ';
                 }
-                echo '
-                </div>
-                ';
-
+                echo '</div>';
             } else {
                 echo "<div style='color: white; margin-top:10px;'>";
                 echo "There are no results in TV Series matching your search: " . "$search";
@@ -96,9 +83,7 @@ include "header.php";
             }
         }
         ?>
-
 </main>
-
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
             crossorigin="anonymous"></script>
@@ -108,5 +93,4 @@ include "header.php";
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
-
 <?php include "footer.php"; ?>

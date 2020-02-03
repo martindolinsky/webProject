@@ -6,12 +6,12 @@ include_once 'connection.php';
 <head>
     <title>Contact</title>
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body style="margin: 0; min-height: 100vh">
 <?php include 'header.php';?>
-
 <div class="container1" style="background-color: #363836;color: #fff;margin: 100px 20%;">
     <form class="contact-form" action="contactform.php" method="post" style="display: flex; flex-direction: column;align-items: center">
         <h3 style="padding-top: 20px;">First name:</h3>
@@ -30,7 +30,6 @@ include_once 'connection.php';
         <button type="submit" name="submit" class="btn btn-outline-danger" style="margin: 10px">Submit</button>
     </form>
 </div>
-
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -40,5 +39,4 @@ include_once 'connection.php';
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-
 <?php include 'footer.php'?>

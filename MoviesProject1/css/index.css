@@ -59,7 +59,7 @@ nav {
     border-radius: 0.5rem;
 }
 .navbar-dark {
-    background-color: #222422;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 .navbar-collapse {
     flex-flow: row-reverse;
@@ -114,6 +114,10 @@ header ul li {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.row-grid a {
+    color: white;
+}
 .row-grid a:hover {
     text-decoration: none;
     color: red;
@@ -128,12 +132,21 @@ header ul li {
     text-decoration: none;
     color: red;
 }
+
+.hoverButton {
+    color: black;
+}
+
+.hoverButton:hover {
+    text-decoration: none;
+}
 .footer {
     margin-top: 50px;
-    padding: 1.5em 0 1em 0em;
+    font-size: 0.75em;
+    padding: 1em 0 0.5em 0em;
     margin-bottom: 0em;
     text-align: center;
-    background-color: #222422;
+    background-color: rgba(0, 0, 0, 0.2);
     color: white;
 }
 @media screen and (min-width: 300px) {

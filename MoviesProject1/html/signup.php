@@ -11,7 +11,6 @@ include_once 'connection.php';
 </head>
 <body style="margin: 0; min-height: 100vh">
 <?php include 'header.php';?>
-
 <main>
     <div class="container1" style="background-color: #363836;color: #fff;margin: 100px 20%;">
         <h1 style="text-align: center">Sign Up</h1>
@@ -41,7 +40,6 @@ include_once 'connection.php';
 
          }
         ?>
-
         <form class="signup-form" action="signup.inc.php" method="post" style="display: flex; flex-direction: column;align-items: center">
             <h3 style="padding-top: 20px;">Username:</h3>
             <input style="width: 50%; margin: 10px; padding: 5px; border-radius: 10px; border: 2px solid black; font-size: 1.5em"
@@ -55,13 +53,11 @@ include_once 'connection.php';
             <h3>Repeat password:</h3>
             <input style="width: 50%; margin: 10px; padding: 5px; border-radius: 10px; border: 2px solid black; font-size: 1.5em"
                    type="password" name="pwd-repeat" placeholder="Repeat password">
-            <button type="submit" name="signup-submit" class="btn btn-outline-primary" style="margin: 10px">Sign up</button>
-
+            <button type="submit" name="signup-submit" class="btn btn-outline-danger" style="margin: 10px">Sign up
+            </button>
         </form>
     </div>
 </main>
-
-
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -71,5 +67,4 @@ include_once 'connection.php';
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-
 <?php include 'footer.php'?>

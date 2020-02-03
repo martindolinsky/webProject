@@ -1,12 +1,3 @@
-const menuTarget = document.querySelector('[data-menu-toggle]')
-const menu = document.querySelector('[data-menu]')
-
-menuTarget.addEventListener('click', event => {
-    event.preventDefault()
-    menuTarget.lastElementChild.classList.toggle('text-brand')
-    menu.classList.toggle('hidden')
-});
-
 const first = document.getElementById("section-latest");
 const second = document.getElementById("section-title-az");
 const third = document.getElementById("section-title-za");
@@ -29,7 +20,6 @@ function showOrHide1() {
         thirdBut.style.color = "white";
         fourthBut.style.color = "white";
         fifthBut.style.color = "white";
-
 
         second.style.display = "none";
         third.style.display = "none";

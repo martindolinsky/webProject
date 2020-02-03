@@ -26,32 +26,24 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link" href="contact.php">Contact</a>
                     </li>
-
                         <?php
                         if (!empty($_SESSION['userId'])) {
                             echo '
                             <li class="nav-item">
-                            <a class="nav-link" href="profile.php">Profile</a>
-                            </li>
-                            
-                            
+                            <a class="nav-link" href="profile.php">Profile</a></li>    
                             <li class="nav-item"><form action="logout.inc.php" method="post">
-                                                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" name="logout-submit">Logout</button>
-                                            </form></li>';
+                            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" name="logout-submit">Logout</button>
+                            </form></li>';
                         }
                         else {
                             echo '
                     <a class="nav-link" href="login.php"><button class="btn btn-outline-danger my-2 my-sm-0" type="submit" name="login-page">Log in</button></a>
                     <li class="nav-item"><a href="signup.php" class="nav-link header-signup" style="text-align: center"><button class="btn btn-outline-danger my-2 my-sm-0" type="submit" name="signup-page">Sign up</button></a></li>
-                    
-            
                 ';
                         }
                         ?>
-
                 </ul>
             </div>
-
             <div class="form">
                 <form class="form-inline my-2 my-lg-0" action="search.php" method="POST">
                     <input class="form-control mr-sm-2" name="search" type="text" placeholder="Search..."

@@ -11,7 +11,6 @@ include_once 'connection.php';
 </head>
 <body style="margin: 0; min-height: 100vh">
 <?php include 'header.php';?>
-
 <main>
     <div class="container1" style="background-color: #363836;color: #fff;margin: 100px 20%;">
         <h1 style="text-align: center">Log in</h1>
@@ -35,7 +34,8 @@ include_once 'connection.php';
             <h3>Password:</h3>
             <input style="width: 50%; margin: 10px; padding: 5px; border-radius: 10px; border: 2px solid black; font-size: 1.5em"
                    type="password" name="pwd" placeholder="Password">
-            <button type="submit" name="login-submit" class="btn btn-outline-primary" style="margin: 10px">Log in</button>
+            <button type="submit" name="login-submit" class="btn btn-outline-danger" style="margin: 10px">Log in
+            </button>
             <?php
             if (isset($_GET['newpwd'])) {
                 if ($_GET['newpwd'] == "passwordupdated") {
@@ -43,12 +43,10 @@ include_once 'connection.php';
                 }
             }
             ?>
-            <a href="reset-password.php">Forgot your password?</a>
+            <a style="color: indianred;" href="reset-password.php">Forgot your password?</a>
         </form>
     </div>
 </main>
-
-
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -58,5 +56,4 @@ include_once 'connection.php';
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-
 <?php include 'footer.php'?>
